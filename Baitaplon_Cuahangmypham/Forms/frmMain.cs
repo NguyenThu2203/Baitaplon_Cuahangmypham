@@ -60,5 +60,11 @@ namespace Baitaplon_Cuahangmypham
             frmHanghoa a = new frmHanghoa();
             a.Show(); 
         }
+
+        private void mnuDanhmucHDB_Click(object sender, EventArgs e)
+        {
+            frmHoadonban a = new frmHoadonban();
+            a.Show();
+        }
     }
 }
