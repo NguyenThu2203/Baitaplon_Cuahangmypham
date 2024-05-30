@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CuaHangMyPham.Forms
+namespace Baitaplon_Cuahangmypham.Forms
 {
     public partial class frmNhanvien : Form
     {
