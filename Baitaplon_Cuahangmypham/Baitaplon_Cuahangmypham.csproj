@@ -108,6 +108,12 @@
     <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmNhacungcap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNhacungcap.Designer.cs">
+      <DependentUpon>frmNhacungcap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmNhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     </Compile>
     <Compile Include="Forms\frmNuocsanxuat.Designer.cs">
       <DependentUpon>frmNuocsanxuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTimkiemHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTimkiemHDN.Designer.cs">
+      <DependentUpon>frmTimkiemHDN.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmTracuuHH.cs">
       <SubType>Form</SubType>
@@ -158,6 +170,9 @@
     <EmbeddedResource Include="Forms\frmHangsanxuat.resx">
       <DependentUpon>frmHangsanxuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHoadonnhap.resx">
+      <DependentUpon>frmHoadonnhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmkhach.resx">
       <DependentUpon>frmkhach.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,11 +182,17 @@
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNhacungcap.resx">
+      <DependentUpon>frmNhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNuocsanxuat.resx">
       <DependentUpon>frmNuocsanxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTimkiemHDN.resx">
+      <DependentUpon>frmTimkiemHDN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTracuuHH.resx">
       <DependentUpon>frmTracuuHH.cs</DependentUpon>
