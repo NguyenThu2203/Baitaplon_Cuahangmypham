@@ -581,7 +581,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 739);
+            this.ClientSize = new System.Drawing.Size(1004, 761);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnBoqua);

@@ -90,6 +90,12 @@
     <Compile Include="Forms\frmNuocsanxuat.Designer.cs">
       <DependentUpon>frmNuocsanxuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmTracuuHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTracuuHH.Designer.cs">
+      <DependentUpon>frmTracuuHH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Hoadonban.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <EmbeddedResource Include="Forms\frmNuocsanxuat.resx">
       <DependentUpon>frmNuocsanxuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTracuuHH.resx">
+      <DependentUpon>frmTracuuHH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Hoadonban.resx">
       <DependentUpon>Hoadonban.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +139,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,6 +182,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mypham.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
