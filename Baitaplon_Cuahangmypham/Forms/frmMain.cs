@@ -66,5 +66,10 @@ namespace Baitaplon_Cuahangmypham
             frmHoadonban a = new frmHoadonban();
             a.Show();
         }
+         private void mnuTracuuKH_Click(object sender, EventArgs e)
+         {
+            frmTimkiemKH b = new frmTimkiemKH();
+            b.Show();
+         }
     }
 }
