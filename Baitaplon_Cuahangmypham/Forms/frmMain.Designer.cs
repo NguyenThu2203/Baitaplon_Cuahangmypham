@@ -71,19 +71,20 @@
             // mnuBaocaoTK
             // 
             this.mnuBaocaoTK.Name = "mnuBaocaoTK";
-            this.mnuBaocaoTK.Size = new System.Drawing.Size(217, 26);
+            this.mnuBaocaoTK.Size = new System.Drawing.Size(224, 26);
             this.mnuBaocaoTK.Text = "Báo cáo tồn kho";
             // 
             // mnuBaocaoDT
             // 
             this.mnuBaocaoDT.Name = "mnuBaocaoDT";
-            this.mnuBaocaoDT.Size = new System.Drawing.Size(217, 26);
+            this.mnuBaocaoDT.Size = new System.Drawing.Size(224, 26);
             this.mnuBaocaoDT.Text = "Báo cáo doanh thu";
+            this.mnuBaocaoDT.Click += new System.EventHandler(this.mnuBaocaoDT_Click);
             // 
             // mnuBaocaoBH
             // 
             this.mnuBaocaoBH.Name = "mnuBaocaoBH";
-            this.mnuBaocaoBH.Size = new System.Drawing.Size(217, 26);
+            this.mnuBaocaoBH.Size = new System.Drawing.Size(224, 26);
             this.mnuBaocaoBH.Text = "Báo cáo bán hàng";
             // 
             // báoCáoToolStripMenuItem
