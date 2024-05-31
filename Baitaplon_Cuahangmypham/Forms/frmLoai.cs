@@ -19,6 +19,8 @@ namespace Baitaplon_Cuahangmypham.Forms
 
         private void frmLoai_Load(object sender, EventArgs e)
         {
+            Class.Functions.Connect();
+            MessageBox.Show("Kết nối thành công");
             txtMaloai.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;

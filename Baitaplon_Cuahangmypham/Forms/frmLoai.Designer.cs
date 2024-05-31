@@ -45,22 +45,23 @@
             // 
             // dgridLoai
             // 
+            this.dgridLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridLoai.Location = new System.Drawing.Point(86, 155);
-            this.dgridLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgridLoai.Location = new System.Drawing.Point(73, 149);
             this.dgridLoai.Name = "dgridLoai";
+            this.dgridLoai.ReadOnly = true;
             this.dgridLoai.RowHeadersWidth = 51;
             this.dgridLoai.RowTemplate.Height = 24;
-            this.dgridLoai.Size = new System.Drawing.Size(534, 188);
+            this.dgridLoai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgridLoai.Size = new System.Drawing.Size(475, 150);
             this.dgridLoai.TabIndex = 59;
             this.dgridLoai.Click += new System.EventHandler(this.dgridLoai_Click);
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(687, 419);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDong.Location = new System.Drawing.Point(611, 335);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(84, 48);
+            this.btnDong.Size = new System.Drawing.Size(75, 38);
             this.btnDong.TabIndex = 58;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
@@ -68,10 +69,9 @@
             // 
             // btnBoqua
             // 
-            this.btnBoqua.Location = new System.Drawing.Point(555, 419);
-            this.btnBoqua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBoqua.Location = new System.Drawing.Point(493, 335);
             this.btnBoqua.Name = "btnBoqua";
-            this.btnBoqua.Size = new System.Drawing.Size(84, 48);
+            this.btnBoqua.Size = new System.Drawing.Size(75, 38);
             this.btnBoqua.TabIndex = 57;
             this.btnBoqua.Text = "Bỏ qua";
             this.btnBoqua.UseVisualStyleBackColor = true;
@@ -79,10 +79,9 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(408, 419);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLuu.Location = new System.Drawing.Point(363, 335);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(84, 48);
+            this.btnLuu.Size = new System.Drawing.Size(75, 38);
             this.btnLuu.TabIndex = 56;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -90,10 +89,9 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(271, 419);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoa.Location = new System.Drawing.Point(241, 335);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(84, 48);
+            this.btnXoa.Size = new System.Drawing.Size(75, 38);
             this.btnXoa.TabIndex = 55;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -101,10 +99,9 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(151, 419);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSua.Location = new System.Drawing.Point(134, 335);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(84, 48);
+            this.btnSua.Size = new System.Drawing.Size(75, 38);
             this.btnSua.TabIndex = 54;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -112,10 +109,9 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(30, 419);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThem.Location = new System.Drawing.Point(27, 335);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 48);
+            this.btnThem.Size = new System.Drawing.Size(75, 38);
             this.btnThem.TabIndex = 53;
             this.btnThem.Text = "Thêm ";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -123,18 +119,16 @@
             // 
             // txtTenloai
             // 
-            this.txtTenloai.Location = new System.Drawing.Point(176, 109);
-            this.txtTenloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenloai.Location = new System.Drawing.Point(156, 87);
             this.txtTenloai.Name = "txtTenloai";
-            this.txtTenloai.Size = new System.Drawing.Size(306, 26);
+            this.txtTenloai.Size = new System.Drawing.Size(272, 22);
             this.txtTenloai.TabIndex = 52;
             // 
             // txtMaloai
             // 
-            this.txtMaloai.Location = new System.Drawing.Point(176, 52);
-            this.txtMaloai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaloai.Location = new System.Drawing.Point(156, 42);
             this.txtMaloai.Name = "txtMaloai";
-            this.txtMaloai.Size = new System.Drawing.Size(306, 26);
+            this.txtMaloai.Size = new System.Drawing.Size(272, 22);
             this.txtMaloai.TabIndex = 51;
             this.txtMaloai.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMaloai_KeyUp);
             // 
@@ -142,9 +136,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(178, -5);
+            this.label3.Location = new System.Drawing.Point(158, -4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(437, 44);
+            this.label3.Size = new System.Drawing.Size(364, 37);
             this.label3.TabIndex = 50;
             this.label3.Text = "Danh mục loại sản phẩm";
             // 
@@ -152,9 +146,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(52, 110);
+            this.label2.Location = new System.Drawing.Point(46, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 25);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 49;
             this.label2.Text = "Tên loại";
             // 
@@ -162,17 +156,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(48, 59);
+            this.label1.Location = new System.Drawing.Point(43, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 25);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 48;
             this.label1.Text = "Mã loại";
             // 
             // frmLoai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 475);
+            this.ClientSize = new System.Drawing.Size(711, 380);
             this.Controls.Add(this.dgridLoai);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnBoqua);
@@ -185,6 +179,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLoai";
             this.Text = "frmLoai";
             this.Load += new System.EventHandler(this.frmLoai_Load);

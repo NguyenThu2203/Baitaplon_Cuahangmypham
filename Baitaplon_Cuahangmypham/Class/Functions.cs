@@ -15,8 +15,8 @@ namespace Baitaplon_Cuahangmypham.Class
             public static string connString;   //Khai báo biến chứa chuỗi kết nối
             public static void Connect()
             {
-            connString = "Data Source=DESKTOP-NM815JH\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
-            //connString = "Data Source=LAPTOP-8CQUN76N\\sqlexpress;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
+            //connString = "Data Source=DESKTOP-NM815JH\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
+            connString = "Data Source=LAPTOP-9FSA2OM9\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
                 Conn = new SqlConnection();                 //Cấp phát đối tượng
                 Conn.ConnectionString = connString;         //Kết nối
                 Conn.Open();                                //Mở kết nối

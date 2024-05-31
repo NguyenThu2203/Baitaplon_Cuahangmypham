@@ -45,22 +45,23 @@
             // 
             // dgridHangsx
             // 
+            this.dgridHangsx.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridHangsx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridHangsx.Location = new System.Drawing.Point(82, 174);
-            this.dgridHangsx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgridHangsx.Location = new System.Drawing.Point(78, 163);
             this.dgridHangsx.Name = "dgridHangsx";
+            this.dgridHangsx.ReadOnly = true;
             this.dgridHangsx.RowHeadersWidth = 51;
             this.dgridHangsx.RowTemplate.Height = 24;
-            this.dgridHangsx.Size = new System.Drawing.Size(534, 188);
+            this.dgridHangsx.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgridHangsx.Size = new System.Drawing.Size(475, 150);
             this.dgridHangsx.TabIndex = 71;
             this.dgridHangsx.Click += new System.EventHandler(this.dgridHangsx_Click);
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(670, 444);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDong.Location = new System.Drawing.Point(596, 355);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(84, 48);
+            this.btnDong.Size = new System.Drawing.Size(75, 38);
             this.btnDong.TabIndex = 70;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
@@ -68,10 +69,9 @@
             // 
             // btnBoqua
             // 
-            this.btnBoqua.Location = new System.Drawing.Point(538, 444);
-            this.btnBoqua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBoqua.Location = new System.Drawing.Point(478, 355);
             this.btnBoqua.Name = "btnBoqua";
-            this.btnBoqua.Size = new System.Drawing.Size(84, 48);
+            this.btnBoqua.Size = new System.Drawing.Size(75, 38);
             this.btnBoqua.TabIndex = 69;
             this.btnBoqua.Text = "Bỏ qua";
             this.btnBoqua.UseVisualStyleBackColor = true;
@@ -79,10 +79,9 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(391, 444);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLuu.Location = new System.Drawing.Point(348, 355);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(84, 48);
+            this.btnLuu.Size = new System.Drawing.Size(75, 38);
             this.btnLuu.TabIndex = 68;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -90,10 +89,9 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(254, 444);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoa.Location = new System.Drawing.Point(226, 355);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(84, 48);
+            this.btnXoa.Size = new System.Drawing.Size(75, 38);
             this.btnXoa.TabIndex = 67;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -101,10 +99,9 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(134, 444);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSua.Location = new System.Drawing.Point(119, 355);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(84, 48);
+            this.btnSua.Size = new System.Drawing.Size(75, 38);
             this.btnSua.TabIndex = 66;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -112,10 +109,9 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(13, 444);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThem.Location = new System.Drawing.Point(12, 355);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(84, 48);
+            this.btnThem.Size = new System.Drawing.Size(75, 38);
             this.btnThem.TabIndex = 65;
             this.btnThem.Text = "Thêm ";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -123,18 +119,16 @@
             // 
             // txtTenhangsx
             // 
-            this.txtTenhangsx.Location = new System.Drawing.Point(228, 125);
-            this.txtTenhangsx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTenhangsx.Location = new System.Drawing.Point(203, 100);
             this.txtTenhangsx.Name = "txtTenhangsx";
-            this.txtTenhangsx.Size = new System.Drawing.Size(306, 26);
+            this.txtTenhangsx.Size = new System.Drawing.Size(272, 22);
             this.txtTenhangsx.TabIndex = 64;
             // 
             // txtMahangsx
             // 
-            this.txtMahangsx.Location = new System.Drawing.Point(225, 81);
-            this.txtMahangsx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMahangsx.Location = new System.Drawing.Point(200, 65);
             this.txtMahangsx.Name = "txtMahangsx";
-            this.txtMahangsx.Size = new System.Drawing.Size(306, 26);
+            this.txtMahangsx.Size = new System.Drawing.Size(272, 22);
             this.txtMahangsx.TabIndex = 63;
             this.txtMahangsx.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMahangsx_KeyUp);
             // 
@@ -142,9 +136,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(181, 9);
+            this.label3.Location = new System.Drawing.Point(161, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(435, 44);
+            this.label3.Size = new System.Drawing.Size(365, 37);
             this.label3.TabIndex = 62;
             this.label3.Text = "Danh mục hãng sản xuất";
             // 
@@ -152,9 +146,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(31, 126);
+            this.label2.Location = new System.Drawing.Point(28, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 25);
+            this.label2.Size = new System.Drawing.Size(146, 20);
             this.label2.TabIndex = 61;
             this.label2.Text = "Tên hãng sản xuất";
             // 
@@ -162,17 +156,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(31, 84);
+            this.label1.Location = new System.Drawing.Point(28, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 25);
+            this.label1.Size = new System.Drawing.Size(141, 20);
             this.label1.TabIndex = 60;
             this.label1.Text = "Mã hãng sản xuất";
             // 
             // frmHangsanxuat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 485);
+            this.ClientSize = new System.Drawing.Size(711, 388);
             this.Controls.Add(this.dgridHangsx);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnBoqua);
@@ -185,6 +179,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmHangsanxuat";
             this.Text = "frmHangsanxuat";
             this.Load += new System.EventHandler(this.frmHangsanxuat_Load);
