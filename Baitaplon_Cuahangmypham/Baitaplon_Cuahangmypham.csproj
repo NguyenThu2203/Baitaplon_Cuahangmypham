@@ -54,6 +54,12 @@
     <Compile Include="Forms\frmBaocaoBH.Designer.cs">
       <DependentUpon>frmBaocaoBH.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmBaocaodoanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBaocaodoanhthu.Designer.cs">
+      <DependentUpon>frmBaocaodoanhthu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmChatlieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,15 @@
     <Compile Include="Forms\frmHoadonnhap.Designer.cs">
       <DependentUpon>frmHoadonnhap.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Forms\frmkhach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmkhach.Designer.cs">
+      <DependentUpon>frmkhach.cs</DependentUpon>
+    </Compile>
+>>>>>>> 9e247f8d54d27810fb69a629daf3a469f2e1df19
     <Compile Include="Forms\frmLoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +111,12 @@
     <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmNhacungcap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNhacungcap.Designer.cs">
+      <DependentUpon>frmNhacungcap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmNhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +128,12 @@
     </Compile>
     <Compile Include="Forms\frmNuocsanxuat.Designer.cs">
       <DependentUpon>frmNuocsanxuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTimkiemHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTimkiemHDN.Designer.cs">
+      <DependentUpon>frmTimkiemHDN.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmTracuuHH.cs">
       <SubType>Form</SubType>
@@ -131,6 +158,9 @@
     <EmbeddedResource Include="Forms\frmBaocaoBH.resx">
       <DependentUpon>frmBaocaoBH.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBaocaodoanhthu.resx">
+      <DependentUpon>frmBaocaodoanhthu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChatlieu.resx">
       <DependentUpon>frmChatlieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,17 +173,32 @@
     <EmbeddedResource Include="Forms\frmHangsanxuat.resx">
       <DependentUpon>frmHangsanxuat.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="Forms\frmHoadonnhap.resx">
+      <DependentUpon>frmHoadonnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmkhach.resx">
+      <DependentUpon>frmkhach.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 9e247f8d54d27810fb69a629daf3a469f2e1df19
     <EmbeddedResource Include="Forms\frmLoai.resx">
       <DependentUpon>frmLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNhacungcap.resx">
+      <DependentUpon>frmNhacungcap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNhanvien.resx">
       <DependentUpon>frmNhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNuocsanxuat.resx">
       <DependentUpon>frmNuocsanxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTimkiemHDN.resx">
+      <DependentUpon>frmTimkiemHDN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTracuuHH.resx">
       <DependentUpon>frmTracuuHH.cs</DependentUpon>

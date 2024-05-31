@@ -15,9 +15,10 @@ namespace Baitaplon_Cuahangmypham.Class
             public static string connString;   //Khai báo biến chứa chuỗi kết nối
             public static void Connect()
             {
-             connString = "Data Source=DESKTOP-NM815JH\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
+             connString = "Data Source=XIAODOU;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
             //connString = "Data Source=LAPTOP-9FSA2OM9\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
-                Conn = new SqlConnection();                 //Cấp phát đối tượng
+             
+            Conn = new SqlConnection();                 //Cấp phát đối tượng
                 Conn.ConnectionString = connString;         //Kết nối
                 Conn.Open();                                //Mở kết nối
             }
@@ -286,6 +287,30 @@ namespace Baitaplon_Cuahangmypham.Class
                     break;
             }
             return h;
+        }
+
+        public static string createkey(string tiento)
+        {
+            string key = tiento;
+            string[] partsDay;
+            partsDay = DateTime.Now.ToShortDateString().Split('/');
+            //Ví dụ 07/08/2009
+            string d = String.Format("{0}{1}{2}", partsDay[0], partsDay[1], partsDay[2]);
+            key = key + d;
+            string[] partsTime;
+            partsTime = DateTime.Now.ToLongTimeString().Split(':');
+            //Ví dụ 7:08:03 PM hoặc 7:08:03 AM
+            if (partsTime[2].Substring(3, 2) == "PM")
+                partsTime[0] = ConvertTimeTo24(partsTime[0]);
+            if (partsTime[2].Substring(3, 2) == "AM")
+                if (partsTime[0].Length == 1)
+                    partsTime[0] = "0" + partsTime[0];
+            //Xóa ký tự trắng và PM hoặc AM
+            partsTime[2] = partsTime[2].Remove(2, 3);
+            string t;
+            t = String.Format("_{0}{1}{2}", partsTime[0], partsTime[1], partsTime[2]);
+            key = key + t;
+            return key;
         }
     }
 }

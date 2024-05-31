@@ -19,11 +19,11 @@ namespace Baitaplon_Cuahangmypham.Forms
 
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
+
+
             Class.Functions.Connect();
             //MessageBox.Show("Kết nối thành công");
->>>>>>> bc12c4693ce9031f2d9e6e207265db08869091c3
+
             txtManhanvien.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
