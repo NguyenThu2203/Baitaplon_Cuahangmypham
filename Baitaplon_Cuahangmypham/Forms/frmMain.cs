@@ -79,5 +79,17 @@ namespace Baitaplon_Cuahangmypham
             frmNhanvien a = new frmNhanvien();
             a.Show();
         }
+
+        private void mnuTracuuKH_Click(object sender, EventArgs e)
+        {
+            frmTracuuKH a = new frmTracuuKH();
+            a.Show();
+        }
+
+        private void mnuKhachhang_Click(object sender, EventArgs e)
+        {
+            frmKhachhang a = new frmKhachhang();
+            a.Show();
+        }
     }
 }

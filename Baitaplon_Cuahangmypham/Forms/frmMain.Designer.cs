@@ -99,26 +99,27 @@
             // mnuTracuuKH
             // 
             this.mnuTracuuKH.Name = "mnuTracuuKH";
-            this.mnuTracuuKH.Size = new System.Drawing.Size(191, 26);
+            this.mnuTracuuKH.Size = new System.Drawing.Size(224, 26);
             this.mnuTracuuKH.Text = "Khách hàng";
+            this.mnuTracuuKH.Click += new System.EventHandler(this.mnuTracuuKH_Click);
             // 
             // mnuTracuuhang
             // 
             this.mnuTracuuhang.Name = "mnuTracuuhang";
-            this.mnuTracuuhang.Size = new System.Drawing.Size(191, 26);
+            this.mnuTracuuhang.Size = new System.Drawing.Size(224, 26);
             this.mnuTracuuhang.Text = "Hàng hóa";
             this.mnuTracuuhang.Click += new System.EventHandler(this.mnuTracuuhang_Click);
             // 
             // mnuTracuuHDB
             // 
             this.mnuTracuuHDB.Name = "mnuTracuuHDB";
-            this.mnuTracuuHDB.Size = new System.Drawing.Size(191, 26);
+            this.mnuTracuuHDB.Size = new System.Drawing.Size(224, 26);
             this.mnuTracuuHDB.Text = "Hóa đơn bán";
             // 
             // mnuTracuuHDN
             // 
             this.mnuTracuuHDN.Name = "mnuTracuuHDN";
-            this.mnuTracuuHDN.Size = new System.Drawing.Size(191, 26);
+            this.mnuTracuuHDN.Size = new System.Drawing.Size(224, 26);
             this.mnuTracuuHDN.Text = "Hóa đơn nhập ";
             // 
             // traCứuToolStripMenuItem
@@ -135,14 +136,14 @@
             // mnuLoai
             // 
             this.mnuLoai.Name = "mnuLoai";
-            this.mnuLoai.Size = new System.Drawing.Size(224, 26);
+            this.mnuLoai.Size = new System.Drawing.Size(186, 26);
             this.mnuLoai.Text = "Loại";
             this.mnuLoai.Click += new System.EventHandler(this.mnuLoai_Click);
             // 
             // mnuHangsx
             // 
             this.mnuHangsx.Name = "mnuHangsx";
-            this.mnuHangsx.Size = new System.Drawing.Size(224, 26);
+            this.mnuHangsx.Size = new System.Drawing.Size(186, 26);
             this.mnuHangsx.Text = "Hãng sản xuất";
             this.mnuHangsx.Click += new System.EventHandler(this.mnuHangsx_Click);
             // 
@@ -155,20 +156,20 @@
             // mnuHanghoaNCC
             // 
             this.mnuHanghoaNCC.Name = "mnuHanghoaNCC";
-            this.mnuHanghoaNCC.Size = new System.Drawing.Size(224, 26);
+            this.mnuHanghoaNCC.Size = new System.Drawing.Size(186, 26);
             this.mnuHanghoaNCC.Text = "Nhà cung cấp";
             // 
             // mnuNuocsx
             // 
             this.mnuNuocsx.Name = "mnuNuocsx";
-            this.mnuNuocsx.Size = new System.Drawing.Size(224, 26);
+            this.mnuNuocsx.Size = new System.Drawing.Size(186, 26);
             this.mnuNuocsx.Text = "Nước sản xuất";
             this.mnuNuocsx.Click += new System.EventHandler(this.mnuNuocsx_Click);
             // 
             // mnuChatlieu
             // 
             this.mnuChatlieu.Name = "mnuChatlieu";
-            this.mnuChatlieu.Size = new System.Drawing.Size(224, 26);
+            this.mnuChatlieu.Size = new System.Drawing.Size(186, 26);
             this.mnuChatlieu.Text = "Chất liệu ";
             this.mnuChatlieu.Click += new System.EventHandler(this.mnuChatlieu_Click);
             // 
@@ -188,7 +189,7 @@
             // mnuCongdung
             // 
             this.mnuCongdung.Name = "mnuCongdung";
-            this.mnuCongdung.Size = new System.Drawing.Size(224, 26);
+            this.mnuCongdung.Size = new System.Drawing.Size(186, 26);
             this.mnuCongdung.Text = "Công dụng";
             this.mnuCongdung.Click += new System.EventHandler(this.mnuCongdung_Click);
             // 
@@ -210,6 +211,7 @@
             this.mnuKhachhang.Name = "mnuKhachhang";
             this.mnuKhachhang.Size = new System.Drawing.Size(224, 26);
             this.mnuKhachhang.Text = "Khách hàng";
+            this.mnuKhachhang.Click += new System.EventHandler(this.mnuKhachhang_Click);
             // 
             // mnuDanhmucHDB
             // 

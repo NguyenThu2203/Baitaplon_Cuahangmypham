@@ -20,7 +20,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         private void frmNhanvien_Load(object sender, EventArgs e)
         {
             Class.Functions.Connect();
-            MessageBox.Show("Kết nối thành công");
+            //MessageBox.Show("Kết nối thành công");
             txtManhanvien.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
