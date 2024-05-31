@@ -90,11 +90,11 @@
     <Compile Include="Forms\frmHoadonnhap.Designer.cs">
       <DependentUpon>frmHoadonnhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmKhachhang.cs">
+    <Compile Include="Forms\frmkhach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmKhachhang.Designer.cs">
-      <DependentUpon>frmKhachhang.cs</DependentUpon>
+    <Compile Include="Forms\frmkhach.Designer.cs">
+      <DependentUpon>frmkhach.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmLoai.cs">
       <SubType>Form</SubType>
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="Forms\frmHangsanxuat.resx">
       <DependentUpon>frmHangsanxuat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmKhachhang.resx">
-      <DependentUpon>frmKhachhang.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmkhach.resx">
+      <DependentUpon>frmkhach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLoai.resx">
       <DependentUpon>frmLoai.cs</DependentUpon>
