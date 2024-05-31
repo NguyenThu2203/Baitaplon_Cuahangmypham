@@ -19,6 +19,8 @@ namespace Baitaplon_Cuahangmypham.Forms
 
         private void frmHangsanxuat_Load(object sender, EventArgs e)
         {
+            Class.Functions.Connect();
+            //MessageBox.Show("Kết nối thành công");
             txtMahangsx.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
@@ -155,7 +157,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             }
             if (txtMahangsx.Text == "")
             {
-                MessageBox.Show("Bạn chưa chọn bản ghi nào1", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn chưa chọn bản ghi nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
