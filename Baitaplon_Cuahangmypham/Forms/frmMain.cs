@@ -88,14 +88,20 @@ namespace Baitaplon_Cuahangmypham
 
         private void mnuKhachhang_Click(object sender, EventArgs e)
         {
-            frmkhach a = new frmkhach();
-            a.Show();
+            //frmkhach a = new frmkhach();
+            //a.Show();
         }
 
         private void mnuBaocaoDT_Click(object sender, EventArgs e)
         {
             frmBaocaodoanhthu a = new frmBaocaodoanhthu();
             a.Show();
+        }
+
+        private void mnuDanhmucHDN_Click(object sender, EventArgs e)
+        {
+            frmHoadonnhap a = new frmHoadonnhap();
+            a.Show(); 
         }
     }
 }

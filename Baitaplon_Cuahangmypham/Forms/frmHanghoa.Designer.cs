@@ -581,6 +581,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1004, 761);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnDong);
@@ -600,6 +601,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmHanghoa";
             this.Text = "frmHanghoa";
             this.Load += new System.EventHandler(this.frmHanghoa_Load);
