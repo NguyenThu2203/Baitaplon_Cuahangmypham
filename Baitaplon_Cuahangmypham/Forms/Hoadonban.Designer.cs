@@ -540,6 +540,7 @@
             this.Controls.Add(this.label2);
             this.Name = "frmHoadonban";
             this.Text = "Hoadonban";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHoadonban_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
