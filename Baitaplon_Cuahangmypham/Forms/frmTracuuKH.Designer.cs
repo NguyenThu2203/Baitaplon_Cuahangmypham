@@ -41,7 +41,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgridTimkiemkH)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +78,7 @@
             // 
             this.dgridTimkiemkH.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridTimkiemkH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridTimkiemkH.Location = new System.Drawing.Point(44, 206);
+            this.dgridTimkiemkH.Location = new System.Drawing.Point(22, 234);
             this.dgridTimkiemkH.Name = "dgridTimkiemkH";
             this.dgridTimkiemkH.ReadOnly = true;
             this.dgridTimkiemkH.RowHeadersWidth = 51;
@@ -87,7 +86,6 @@
             this.dgridTimkiemkH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgridTimkiemkH.Size = new System.Drawing.Size(723, 182);
             this.dgridTimkiemkH.TabIndex = 68;
-            this.dgridTimkiemkH.DoubleClick += new System.EventHandler(this.dgridTimkiemkH_DoubleClick);
             // 
             // mskdienthoai
             // 
@@ -164,24 +162,11 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "TÌM KIẾM KHÁCH HÀNG";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(52, 403);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(415, 20);
-            this.label7.TabIndex = 72;
-            this.label7.Text = "Kích đúp vào 1 khách hàng để hiển thị thông tin chi tiết";
-            // 
             // frmTracuuKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 564);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnTimkiemlai);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnTimkiem);
@@ -219,6 +204,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
     }
 }
