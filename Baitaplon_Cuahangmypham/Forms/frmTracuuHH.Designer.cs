@@ -212,7 +212,7 @@
             this.btnBoqua.Name = "btnBoqua";
             this.btnBoqua.Size = new System.Drawing.Size(109, 30);
             this.btnBoqua.TabIndex = 104;
-            this.btnBoqua.Text = "Bỏ qua";
+            this.btnBoqua.Text = "Tìm kiếm lại";
             this.btnBoqua.UseVisualStyleBackColor = true;
             this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 

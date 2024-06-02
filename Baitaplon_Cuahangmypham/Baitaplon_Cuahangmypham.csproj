@@ -126,6 +126,12 @@
     <Compile Include="Forms\frmTimkiemHDN.Designer.cs">
       <DependentUpon>frmTimkiemHDN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmTracuuHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTracuuHDB.Designer.cs">
+      <DependentUpon>frmTracuuHDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmTracuuHH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTimkiemHDN.resx">
       <DependentUpon>frmTimkiemHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTracuuHDB.resx">
+      <DependentUpon>frmTracuuHDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTracuuHH.resx">
       <DependentUpon>frmTracuuHH.cs</DependentUpon>

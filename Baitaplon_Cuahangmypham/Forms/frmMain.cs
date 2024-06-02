@@ -108,6 +108,11 @@ namespace Baitaplon_Cuahangmypham
             a.Show(); 
         }
 
+        private void mnuTracuuHDB_Click(object sender, EventArgs e)
+        {
+            frmTracuuHDB a = new frmTracuuHDB();
+            a.Show();
+        }
         private void mnuNhacungcap_Click(object sender, EventArgs e)
         {
             frmNhacungcap a = new frmNhacungcap();
@@ -134,7 +139,6 @@ namespace Baitaplon_Cuahangmypham
             {
                 Application.Exit();
             }
-
         }
     }
 }
