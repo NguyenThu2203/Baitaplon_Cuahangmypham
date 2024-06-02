@@ -27,6 +27,8 @@ namespace Baitaplon_Cuahangmypham.Forms
             txtManhanvien.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
+            Class.Functions.FillCombo("select MaCV from tblCongviec", cboCV, "MaCV", "MaCV");
+            cboCV.SelectedIndex = -1;
             load_datagrid();
         }
         DataTable tblNV;
@@ -62,7 +64,7 @@ namespace Baitaplon_Cuahangmypham.Forms
 
             txtManhanvien.Text = dgridNhanvien.CurrentRow.Cells["MaNV"].Value.ToString();
             txtTennhanvien.Text = dgridNhanvien.CurrentRow.Cells["TenNV"].Value.ToString();
-            txtMaCV.Text = dgridNhanvien.CurrentRow.Cells["MaCV"].Value.ToString();
+            cboCV.Text = dgridNhanvien.CurrentRow.Cells["MaCV"].Value.ToString();
             txtDiachi.Text = dgridNhanvien.CurrentRow.Cells["Diachi"].Value.ToString();
             mskdienthoai.Text = dgridNhanvien.CurrentRow.Cells["Dienthoai"].Value.ToString();
             mskngaysinh.Text = dgridNhanvien.CurrentRow.Cells["Ngaysinh"].Value.ToString();
@@ -106,7 +108,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             txtManhanvien.Text = "";
             txtTennhanvien.Text = "";
             txtDiachi.Text = "";
-            txtMaCV.Text = "";
+            cboCV.Text = "";
             rdNam.Checked = false;
             rdNu.Checked = false;
             mskdienthoai.Text = "";
@@ -127,7 +129,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 txtTennhanvien.Focus();
                 return;
             }
-            if (txtMaCV.Text == "")
+            if (cboCV.Text == "")
             {
                 MessageBox.Show("Bạn phải nhập mã công việc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTennhanvien.Focus();
@@ -179,7 +181,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 return;
             }
 
-            sql = "insert into tblNhanvien(MaNV, TenNV, Gioitinh, Ngaysinh, Dienthoai, Diachi, MaCV) values(N'" + txtManhanvien.Text + "', N'" + txtTennhanvien.Text + "', N'" + gt + "', '" + Class.Functions.ConvertDatetime(mskngaysinh.Text) + "', '" + mskdienthoai.Text + "', N'" + txtDiachi.Text + "', N'" + txtMaCV.Text + "' )";
+            sql = "insert into tblNhanvien(MaNV, TenNV, Gioitinh, Ngaysinh, Dienthoai, Diachi, MaCV) values(N'" + txtManhanvien.Text + "', N'" + txtTennhanvien.Text + "', N'" + gt + "', '" + Class.Functions.ConvertDatetime(mskngaysinh.Text) + "', '" + mskdienthoai.Text + "', N'" + txtDiachi.Text + "', N'" + cboCV.Text + "' )";
             Class.Functions.RunSql(sql);
             load_datagrid();
             resetvalue();
@@ -243,7 +245,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 txtTennhanvien.Focus();
                 return;
             }
-            if (txtMaCV.Text == "")
+            if (cboCV.Text == "")
             {
                 MessageBox.Show("Bạn phải nhập mã công việc!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTennhanvien.Focus();
@@ -284,7 +286,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 return;
             }
 
-            sql = "update tblNhanvien set TenNV=N'" + txtTennhanvien.Text.Trim().ToString() + "', MaCV=N'" + txtMaCV.Text.Trim().ToString() + "', Diachi=N'" + txtDiachi.Text.Trim().ToString() + "', Gioitinh =N'" + gt + "', Dienthoai='" + mskdienthoai.Text.ToString() + "',  Ngaysinh='" + Class.Functions.ConvertDatetime(mskngaysinh.Text) + "' where MaNV=N'" + txtManhanvien.Text + "'";
+            sql = "update tblNhanvien set TenNV=N'" + txtTennhanvien.Text.Trim().ToString() + "', MaCV=N'" + cboCV.Text.Trim().ToString() + "', Diachi=N'" + txtDiachi.Text.Trim().ToString() + "', Gioitinh =N'" + gt + "', Dienthoai='" + mskdienthoai.Text.ToString() + "',  Ngaysinh='" + Class.Functions.ConvertDatetime(mskngaysinh.Text) + "' where MaNV=N'" + txtManhanvien.Text + "'";
             Class.Functions.RunSql(sql);
             load_datagrid();
             resetvalue();

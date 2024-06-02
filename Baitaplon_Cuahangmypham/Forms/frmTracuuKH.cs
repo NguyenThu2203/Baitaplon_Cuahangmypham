@@ -78,10 +78,20 @@ namespace Baitaplon_Cuahangmypham.Forms
             }
             else
                 MessageBox.Show("Có " + tblTKKH.Rows.Count + " bản ghi thỏa mãn điều kiện!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            txtMaKH.Enabled = false;
+            txtTenKH.Enabled = false;
+            txtDiachi.Enabled = false;
+            mskdienthoai.Enabled = false;
+            resetvalue();
         }
 
         private void btnTimkiemlai_Click(object sender, EventArgs e)
         {
+            txtMaKH.Enabled = true;
+            txtTenKH.Enabled = true;
+            txtDiachi.Enabled = true;
+            mskdienthoai.Enabled = true;
             resetvalue();
             load_datagrid();
         }
