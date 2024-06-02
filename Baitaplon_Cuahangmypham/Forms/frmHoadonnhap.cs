@@ -619,7 +619,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         {
             if (MessageBox.Show("Bạn có chắc chắc muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                Application.Exit();
+                this.Close(); 
             }
         }
 

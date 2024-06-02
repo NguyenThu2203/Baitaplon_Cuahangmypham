@@ -52,7 +52,6 @@
             this.cboMamau = new System.Windows.Forms.ComboBox();
             this.cboManuocSX = new System.Windows.Forms.ComboBox();
             this.txtAnh = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.picAnh = new System.Windows.Forms.PictureBox();
             this.cboMamua = new System.Windows.Forms.ComboBox();
@@ -298,15 +297,6 @@
             this.txtAnh.Name = "txtAnh";
             this.txtAnh.Size = new System.Drawing.Size(152, 26);
             this.txtAnh.TabIndex = 49;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(46, 280);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 20);
-            this.label7.TabIndex = 87;
-            this.label7.Text = "Mã công dụng";
             // 
             // btnSua
             // 
@@ -590,7 +580,6 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgridHanghoa);
@@ -640,7 +629,6 @@
         private System.Windows.Forms.ComboBox cboMamau;
         private System.Windows.Forms.ComboBox cboManuocSX;
         private System.Windows.Forms.TextBox txtAnh;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.PictureBox picAnh;
         private System.Windows.Forms.ComboBox cboMamua;
