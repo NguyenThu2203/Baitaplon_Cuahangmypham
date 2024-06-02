@@ -103,5 +103,11 @@ namespace Baitaplon_Cuahangmypham
             frmHoadonnhap a = new frmHoadonnhap();
             a.Show(); 
         }
+
+        private void mnuBaocaoBH_Click(object sender, EventArgs e)
+        {
+            frmBaocaoBH a = new frmBaocaoBH();
+            a.Show(); 
+        }
     }
 }
