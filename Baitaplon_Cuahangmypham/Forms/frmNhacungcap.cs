@@ -59,7 +59,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             txtManhacungcap.Text = dgridNhacungcap.CurrentRow.Cells["MaNCC"].Value.ToString();
             txtTennhacungcap.Text = dgridNhacungcap.CurrentRow.Cells["TenNCC"].Value.ToString();
             txtDiachi.Text = dgridNhacungcap.CurrentRow.Cells["Diachi"].Value.ToString();
-            txtDienthoai.Text = dgridNhacungcap.CurrentRow.Cells["Dienthoai"].Value.ToString();
+            mskDienthoai.Text = dgridNhacungcap.CurrentRow.Cells["Dienthoai"].Value.ToString();
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnBoqua.Enabled = true;
@@ -81,7 +81,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             txtManhacungcap.Text = "";
             txtTennhacungcap.Text = "";
             txtDiachi.Text = "";
-            txtDienthoai.Text = "";
+            mskDienthoai.Text = "(   )    -";
         }
 
         private void btnBoqua_Click(object sender, EventArgs e)
@@ -116,10 +116,10 @@ namespace Baitaplon_Cuahangmypham.Forms
                 txtDiachi.Focus();
                 return;
             }
-            if (txtDienthoai.Text == "")
+            if (mskDienthoai.Text == "(   )    -")
             {
                 MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtDienthoai.Focus();
+                mskDienthoai.Focus();
                 return;
             }
             //ktr trung ma
@@ -131,7 +131,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 txtManhacungcap.Text = "";
                 return;
             }
-            sql = "insert into tblNhacungcap(MaNCC,TenNCC, Diachi, Dienthoai)values(N'" + txtManhacungcap.Text.Trim() + "',N'" + txtTennhacungcap.Text.Trim() + "',N'" + txtDiachi.Text.Trim() + "',N'" + txtDienthoai.Text.Trim() + "')";
+            sql = "insert into tblNhacungcap(MaNCC,TenNCC, Diachi, Dienthoai)values(N'" + txtManhacungcap.Text.Trim() + "',N'" + txtTennhacungcap.Text.Trim() + "',N'" + txtDiachi.Text.Trim() + "',N'" + mskDienthoai.Text.Trim() + "')";
             Class.Functions.RunSql(sql);
             load_datagrid();
             resetvalue();
@@ -169,13 +169,13 @@ namespace Baitaplon_Cuahangmypham.Forms
                 txtDiachi.Focus();
                 return;
             }
-            if (txtDienthoai.Text == "")
+            if (mskDienthoai.Text == "(   )    -")
             {
                 MessageBox.Show("Bạn phải nhập điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtDienthoai.Focus();
+                mskDienthoai.Focus();
                 return;
             }
-            sql = "update tblNhacungcap set TenNCC=N'" + txtTennhacungcap.Text.Trim() + "', DiaChi = N'" + txtDiachi.Text.Trim() + "', DienThoai = N'" + txtDienthoai.Text.Trim() + "' WHERE MaNCC = N'" + txtManhacungcap.Text + "'";
+            sql = "update tblNhacungcap set TenNCC=N'" + txtTennhacungcap.Text.Trim() + "', DiaChi = N'" + txtDiachi.Text.Trim() + "', DienThoai = N'" + mskDienthoai.Text.Trim() + "' WHERE MaNCC = N'" + txtManhacungcap.Text + "'";
             Class.Functions.RunSql(sql);
             load_datagrid();
             resetvalue();

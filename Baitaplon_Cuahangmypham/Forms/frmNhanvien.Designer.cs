@@ -104,12 +104,12 @@
             // 
             // btnDong
             // 
-<<<<<<< HEAD
+
             this.btnDong.Location = new System.Drawing.Point(689, 466);
-=======
+
             this.btnDong.Location = new System.Drawing.Point(782, 560);
             this.btnDong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
->>>>>>> ed31380c9cad0f5ffbbc105da1f34001f5936dfd
+
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(75, 33);
             this.btnDong.TabIndex = 63;
@@ -119,12 +119,12 @@
             // 
             // btnBoqua
             // 
-<<<<<<< HEAD
+
             this.btnBoqua.Location = new System.Drawing.Point(564, 466);
-=======
+
             this.btnBoqua.Location = new System.Drawing.Point(641, 560);
             this.btnBoqua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
->>>>>>> ed31380c9cad0f5ffbbc105da1f34001f5936dfd
+
             this.btnBoqua.Name = "btnBoqua";
             this.btnBoqua.Size = new System.Drawing.Size(75, 33);
             this.btnBoqua.TabIndex = 62;
@@ -134,12 +134,12 @@
             // 
             // btnLuu
             // 
-<<<<<<< HEAD
+
             this.btnLuu.Location = new System.Drawing.Point(431, 466);
-=======
+
             this.btnLuu.Location = new System.Drawing.Point(492, 560);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
->>>>>>> ed31380c9cad0f5ffbbc105da1f34001f5936dfd
+
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 33);
             this.btnLuu.TabIndex = 61;
@@ -149,12 +149,12 @@
             // 
             // btnSua
             // 
-<<<<<<< HEAD
+
             this.btnSua.Location = new System.Drawing.Point(182, 466);
-=======
+
             this.btnSua.Location = new System.Drawing.Point(212, 560);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
->>>>>>> ed31380c9cad0f5ffbbc105da1f34001f5936dfd
+
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 33);
             this.btnSua.TabIndex = 60;
@@ -164,12 +164,12 @@
             // 
             // btnXoa
             // 
-<<<<<<< HEAD
+
             this.btnXoa.Location = new System.Drawing.Point(299, 466);
-=======
+
             this.btnXoa.Location = new System.Drawing.Point(343, 560);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
->>>>>>> ed31380c9cad0f5ffbbc105da1f34001f5936dfd
+
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 33);
             this.btnXoa.TabIndex = 59;
@@ -179,12 +179,12 @@
             // 
             // btnThem
             // 
-<<<<<<< HEAD
+
             this.btnThem.Location = new System.Drawing.Point(62, 466);
-=======
+
             this.btnThem.Location = new System.Drawing.Point(77, 560);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
->>>>>>> ed31380c9cad0f5ffbbc105da1f34001f5936dfd
+
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 33);
             this.btnThem.TabIndex = 58;
@@ -196,12 +196,12 @@
             // 
             this.dgridNhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridNhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
+
             this.dgridNhanvien.Location = new System.Drawing.Point(48, 253);
-=======
+
             this.dgridNhanvien.Location = new System.Drawing.Point(59, 305);
             this.dgridNhanvien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
->>>>>>> ed31380c9cad0f5ffbbc105da1f34001f5936dfd
+
             this.dgridNhanvien.Name = "dgridNhanvien";
             this.dgridNhanvien.ReadOnly = true;
             this.dgridNhanvien.RowHeadersWidth = 51;
