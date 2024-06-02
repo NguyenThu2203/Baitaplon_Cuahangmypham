@@ -49,14 +49,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.msktheongay = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgridSP = new System.Windows.Forms.DataGridView();
             this.dgridCTHDB = new System.Windows.Forms.DataGridView();
             this.btndong = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.btnHienthi = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.grbkhoang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgridSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgridCTHDB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -274,17 +272,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Số HĐB";
             // 
-            // dgridSP
-            // 
-            this.dgridSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgridSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridSP.Location = new System.Drawing.Point(1018, 338);
-            this.dgridSP.Name = "dgridSP";
-            this.dgridSP.RowHeadersWidth = 51;
-            this.dgridSP.RowTemplate.Height = 24;
-            this.dgridSP.Size = new System.Drawing.Size(292, 225);
-            this.dgridSP.TabIndex = 82;
-            // 
             // dgridCTHDB
             // 
             this.dgridCTHDB.AllowUserToAddRows = false;
@@ -292,11 +279,11 @@
             this.dgridCTHDB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridCTHDB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgridCTHDB.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgridCTHDB.Location = new System.Drawing.Point(12, 338);
+            this.dgridCTHDB.Location = new System.Drawing.Point(125, 328);
             this.dgridCTHDB.Name = "dgridCTHDB";
             this.dgridCTHDB.RowHeadersWidth = 51;
             this.dgridCTHDB.RowTemplate.Height = 24;
-            this.dgridCTHDB.Size = new System.Drawing.Size(930, 225);
+            this.dgridCTHDB.Size = new System.Drawing.Size(1087, 225);
             this.dgridCTHDB.TabIndex = 81;
             // 
             // btndong
@@ -339,7 +326,6 @@
             this.Controls.Add(this.btndong);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnHienthi);
-            this.Controls.Add(this.dgridSP);
             this.Controls.Add(this.dgridCTHDB);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
@@ -350,7 +336,6 @@
             this.groupBox1.PerformLayout();
             this.grbkhoang.ResumeLayout(false);
             this.grbkhoang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgridSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgridCTHDB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -380,7 +365,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox msktheongay;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgridSP;
         private System.Windows.Forms.DataGridView dgridCTHDB;
         private System.Windows.Forms.Button btndong;
         private System.Windows.Forms.Button btnIn;

@@ -19,13 +19,13 @@ namespace Baitaplon_Cuahangmypham.Forms
         {
             InitializeComponent();
         }
-        DataTable tblHDB, tblSP;
+        DataTable tblHDB;
         private void frmBaocaobanhang_Load(object sender, EventArgs e)
         {
             Class.Functions.Connect();
             //MessageBox.Show("Ket noi thanh cong:");
             load_datagrid();
-            load_datagridsp();
+            //load_datagridsp();
             Functions.FillCombo("select SoHDB from tblHoadonban", cboSoHDB, "SoHDB", "SoHDB");
             Functions.FillCombo("select Tenhang from tblHanghoa", cbotensp, "Tenhang", "Tenhang");
             Functions.FillCombo("select MaKH from tblKhachhang", cbokhachhang, "MaKH", "MaKH");
@@ -57,18 +57,18 @@ namespace Baitaplon_Cuahangmypham.Forms
             dgridCTHDB.AllowUserToAddRows = false;
             dgridCTHDB.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
-        private void load_datagridsp()
-        {
-            string sql;
-            sql = "select Tenhang, sum(cthdb.Soluong) from tblHanghoa hh join tblChitiethoadonban cthdb on hh.Mahang=cthdb.Mahang group by Tenhang order by sum(cthdb.Soluong) DESC";
-            tblSP = Class.Functions.GetDataToTable(sql);
-            dgridSP.DataSource = tblSP;
-            dgridSP.Columns[0].HeaderText = "Tên hàng ";
-            dgridSP.Columns[1].HeaderText = "Số lượng bán";
+        //private void load_datagridsp()
+        //{
+        //    string sql;
+        //    sql = "select Tenhang, sum(cthdb.Soluong) from tblHanghoa hh join tblChitiethoadonban cthdb on hh.Mahang=cthdb.Mahang group by Tenhang order by sum(cthdb.Soluong) DESC";
+        //    tblSP = Class.Functions.GetDataToTable(sql);
+        //    dgridSP.DataSource = tblSP;
+        //    dgridSP.Columns[0].HeaderText = "Tên hàng ";
+        //    dgridSP.Columns[1].HeaderText = "Số lượng bán";
 
-            dgridSP.AllowUserToAddRows = false;
-            dgridSP.EditMode = DataGridViewEditMode.EditProgrammatically;
-        }
+        //    dgridSP.AllowUserToAddRows = false;
+        //    dgridSP.EditMode = DataGridViewEditMode.EditProgrammatically;
+        //}
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
@@ -275,7 +275,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             exRange.Range["A7:A7"].Value = "STT";
             exRange.Range["A7:A7"].ColumnWidth = 10;
             exRange.Range["B7:B7"].Value = "Số HĐB";
-            exRange.Range["B7:B7"].ColumnWidth = 10;
+            exRange.Range["B7:B7"].ColumnWidth = 15;
             exRange.Range["C7:C7"].Value = "Ngày bán ";
             exRange.Range["C7:C7"].ColumnWidth = 15;
             exRange.Range["D7:D7"].Value = "Mã khách hàng ";
