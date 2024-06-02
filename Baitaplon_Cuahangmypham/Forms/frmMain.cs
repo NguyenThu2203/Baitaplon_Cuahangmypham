@@ -113,5 +113,32 @@ namespace Baitaplon_Cuahangmypham
             frmTracuuHDB a = new frmTracuuHDB();
             a.Show();
         }
+        private void mnuNhacungcap_Click(object sender, EventArgs e)
+        {
+            frmNhacungcap a = new frmNhacungcap();
+            a.Show(); 
+        }
+
+        private void mnuHanghoaNCC_Click(object sender, EventArgs e)
+        {
+            frmNhacungcap a = new frmNhacungcap();
+            a.Show(); 
+        }
+
+        private void mnuTracuuHDN_Click(object sender, EventArgs e)
+        {
+            frmTimkiemHDN a = new frmTimkiemHDN();
+            a.Show(); 
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

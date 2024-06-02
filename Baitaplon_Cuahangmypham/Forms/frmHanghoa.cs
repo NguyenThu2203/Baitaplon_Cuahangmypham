@@ -87,28 +87,28 @@ namespace Baitaplon_Cuahangmypham.Forms
 
             string maloai; 
             maloai = dgridHanghoa.CurrentRow.Cells["Maloai"].Value.ToString();
-            cboMaloai.Text = Functions.getfieldvalues("select Tenchatlieu from tblChatlieu where Machatlieu = N'" + maloai + "'");
+            cboMaloai.Text = Functions.getfieldvalues("select Tenloai from tblLoai where Maloai = N'" + maloai + "'");
             string makl; 
             makl =  dgridHanghoa.CurrentRow.Cells["Makhoiluong"].Value.ToString();
             cboMakhoiluong.Text = Functions.getfieldvalues("select Tenkhoiluong from tblKhoiluong where Makhoiluong = N'" + makl + "'");
             string mahsx; 
             mahsx = dgridHanghoa.CurrentRow.Cells["Mahangsx"].Value.ToString();
-            cboMahangsx.Text = Functions.getfieldvalues("select Mahangsx from tblHangsanxuat where Mahangsx = N'" + mahsx + "'");
+            cboMahangsx.Text = Functions.getfieldvalues("select Tenhangsx from tblHangsanxuat where Mahangsx = N'" + mahsx + "'");
             string macl; 
             macl = dgridHanghoa.CurrentRow.Cells["Machatlieu"].Value.ToString();
             cboMachatlieu.Text = Functions.getfieldvalues("select Tenchatlieu from tblChatlieu where Machatlieu = N'" + macl + "'");
             string macd;
             macd = dgridHanghoa.CurrentRow.Cells["Macongdung"].Value.ToString();
-            cboMacongdung.Text = Functions.getfieldvalues("select Macongdung from tblCongdung where Macongdung = N'" + macd + "'");
+            cboMacongdung.Text = Functions.getfieldvalues("select Tencongdung from tblCongdung where Macongdung = N'" + macd + "'");
             string manua;
             manua = dgridHanghoa.CurrentRow.Cells["Mamua"].Value.ToString();
-            cboMamua.Text = Functions.getfieldvalues("select Mamua from tblMua where Mamua = N'" + manua + "'");
+            cboMamua.Text = Functions.getfieldvalues("select Tenmua from tblMua where Mamua = N'" + manua + "'");
             string mamau;
             mamau = dgridHanghoa.CurrentRow.Cells["Mamau"].Value.ToString();
-            cboMamau.Text = Functions.getfieldvalues("select Mamau from tblMausac where Mamau = N'" + mamau + "'");
+            cboMamau.Text = Functions.getfieldvalues("select Tenmau from tblMausac where Mamau = N'" + mamau + "'");
             string manuoc;
             manuoc = dgridHanghoa.CurrentRow.Cells["ManuocSX"].Value.ToString();
-            cboManuocSX.Text = Functions.getfieldvalues("select ManuocSX from tblNuocsanxuat where ManuocSX = N'" + manuoc + "'");
+            cboManuocSX.Text = Functions.getfieldvalues("select Tennuocsx from tblNuocsanxuat where ManuocSX = N'" + manuoc + "'");
 
             txtSoluong.Text = dgridHanghoa.CurrentRow.Cells["Soluong"].Value.ToString();
             txtThoigianbaohanh.Text = dgridHanghoa.CurrentRow.Cells["Thoigianbaohanh"].Value.ToString();
@@ -148,9 +148,6 @@ namespace Baitaplon_Cuahangmypham.Forms
             btnBoqua.Enabled = true;
             txtMahang.Enabled = true;
             resetvalue();
-            //txtDongianhap.Enabled = false; 
-            //Dơn giá nhập sẽ lấy từ hóa đơn nhập 
-            //Đơn giá bán sẽ lấy từ hàng hóa 
         }
         private void resetvalue()
         {
@@ -266,6 +263,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnBoqua.Enabled = false;
+            txtMahang.Enabled = false; 
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -403,7 +401,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((txtMahang.Text == "") && (txtTenhang.Text == "") && (cboMachatlieu.Text == ""))
+            if ((txtMahang.Text == "") && (txtTenhang.Text == ""))
             {
                 MessageBox.Show("Hãy nhập một điều kiện tìm kiếm!!!", "Yêu cầu nhập điều kiện", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -413,8 +411,6 @@ namespace Baitaplon_Cuahangmypham.Forms
                 sql = sql + " AND Mahang Like N'%" + txtMahang.Text + "%'";
             if (txtTenhang.Text != "")
                 sql = sql + " AND Tenhang Like N'%" + txtTenhang.Text + "%'";
-            if (cboMachatlieu.Text != "")
-                sql = sql + " AND Machatlieu Like N'%" + cboMachatlieu.SelectedValue + "%'";
             tblHH = Functions.GetDataToTable(sql);
             if (tblHH.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thỏa mãn điều kiện!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

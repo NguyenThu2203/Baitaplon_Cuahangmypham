@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.cboMamau = new System.Windows.Forms.ComboBox();
             this.cboManuocSX = new System.Windows.Forms.ComboBox();
             this.txtAnh = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.picAnh = new System.Windows.Forms.PictureBox();
             this.cboMamua = new System.Windows.Forms.ComboBox();
@@ -80,19 +78,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgridHanghoa)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 20);
-            this.label4.TabIndex = 84;
-            this.label4.Text = "Mã khối lượng";
             // 
             // label19
             // 
@@ -167,7 +157,7 @@
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(862, 637);
+            this.btnDong.Location = new System.Drawing.Point(862, 697);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(88, 34);
             this.btnDong.TabIndex = 82;
@@ -177,7 +167,7 @@
             // 
             // btnBoqua
             // 
-            this.btnBoqua.Location = new System.Drawing.Point(519, 637);
+            this.btnBoqua.Location = new System.Drawing.Point(519, 697);
             this.btnBoqua.Name = "btnBoqua";
             this.btnBoqua.Size = new System.Drawing.Size(88, 34);
             this.btnBoqua.TabIndex = 81;
@@ -187,7 +177,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(414, 637);
+            this.btnLuu.Location = new System.Drawing.Point(414, 697);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(88, 34);
             this.btnLuu.TabIndex = 80;
@@ -197,7 +187,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(298, 637);
+            this.btnXoa.Location = new System.Drawing.Point(298, 697);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(88, 34);
             this.btnXoa.TabIndex = 79;
@@ -208,7 +198,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(24, 117);
+            this.label23.Location = new System.Drawing.Point(19, 114);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(107, 20);
             this.label23.TabIndex = 76;
@@ -250,7 +240,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(82, 637);
+            this.btnThem.Location = new System.Drawing.Point(82, 697);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(88, 34);
             this.btnThem.TabIndex = 77;
@@ -299,18 +289,9 @@
             this.txtAnh.Size = new System.Drawing.Size(152, 26);
             this.txtAnh.TabIndex = 49;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(46, 280);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 20);
-            this.label7.TabIndex = 87;
-            this.label7.Text = "Mã công dụng";
-            // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(187, 637);
+            this.btnSua.Location = new System.Drawing.Point(187, 697);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(88, 34);
             this.btnSua.TabIndex = 78;
@@ -394,7 +375,7 @@
             // dgridHanghoa
             // 
             this.dgridHanghoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridHanghoa.Location = new System.Drawing.Point(79, 375);
+            this.dgridHanghoa.Location = new System.Drawing.Point(88, 427);
             this.dgridHanghoa.Name = "dgridHanghoa";
             this.dgridHanghoa.RowHeadersWidth = 62;
             this.dgridHanghoa.RowTemplate.Height = 28;
@@ -433,7 +414,7 @@
             // 
             // btnHienthiDS
             // 
-            this.btnHienthiDS.Location = new System.Drawing.Point(724, 637);
+            this.btnHienthiDS.Location = new System.Drawing.Point(724, 697);
             this.btnHienthiDS.Name = "btnHienthiDS";
             this.btnHienthiDS.Size = new System.Drawing.Size(118, 34);
             this.btnHienthiDS.TabIndex = 91;
@@ -443,7 +424,7 @@
             // 
             // btnTimkiem
             // 
-            this.btnTimkiem.Location = new System.Drawing.Point(624, 637);
+            this.btnTimkiem.Location = new System.Drawing.Point(624, 697);
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(88, 34);
             this.btnTimkiem.TabIndex = 90;
@@ -519,6 +500,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label20);
@@ -555,7 +537,7 @@
             this.groupBox1.Controls.Add(this.txtDongianhap);
             this.groupBox1.Location = new System.Drawing.Point(27, 51);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(947, 315);
+            this.groupBox1.Size = new System.Drawing.Size(947, 356);
             this.groupBox1.TabIndex = 92;
             this.groupBox1.TabStop = false;
             // 
@@ -577,20 +559,27 @@
             this.label3.TabIndex = 75;
             this.label3.Text = "Tên hàng";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(585, 320);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(338, 20);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "Lưu ý: Nhập Mã hàng và Tên hàng để tìm kiếm.";
+            // 
             // frmHanghoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1004, 761);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(1004, 766);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnBoqua);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgridHanghoa);
@@ -615,8 +604,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
@@ -640,7 +627,6 @@
         private System.Windows.Forms.ComboBox cboMamau;
         private System.Windows.Forms.ComboBox cboManuocSX;
         private System.Windows.Forms.TextBox txtAnh;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.PictureBox picAnh;
         private System.Windows.Forms.ComboBox cboMamua;
@@ -668,5 +654,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

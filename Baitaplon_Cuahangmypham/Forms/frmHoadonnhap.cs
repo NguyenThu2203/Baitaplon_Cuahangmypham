@@ -118,7 +118,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             btnIn.Enabled = false;
             btnThem.Enabled = false;
             ResetValues();
-            txtMahoadonnhap.Text = Functions.createkey("I");
+            txtMahoadonnhap.Text = Functions.CreateKey("I");
             LoadDataGridViewChitietHDN();
         }
 
@@ -619,7 +619,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         {
             if (MessageBox.Show("Bạn có chắc chắc muốn thoát không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                Application.Exit();
+                this.Close(); 
             }
         }
 
