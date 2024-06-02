@@ -69,5 +69,15 @@ namespace Baitaplon_Cuahangmypham.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Quản_lý_cửa_hàng_mỹ_phẩm2 {
+            get {
+                object obj = ResourceManager.GetObject("Quản lý cửa hàng mỹ phẩm2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

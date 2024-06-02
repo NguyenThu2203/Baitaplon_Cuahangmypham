@@ -90,12 +90,15 @@
     <Compile Include="Forms\frmHoadonnhap.Designer.cs">
       <DependentUpon>frmHoadonnhap.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Forms\frmkhach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmkhach.Designer.cs">
       <DependentUpon>frmkhach.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 4a7e883250e4fc7ca2cf57a5fa20c8d02258e498
     <Compile Include="Forms\frmLoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,9 +176,12 @@
     <EmbeddedResource Include="Forms\frmHoadonnhap.resx">
       <DependentUpon>frmHoadonnhap.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Forms\frmkhach.resx">
       <DependentUpon>frmkhach.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> 4a7e883250e4fc7ca2cf57a5fa20c8d02258e498
     <EmbeddedResource Include="Forms\frmLoai.resx">
       <DependentUpon>frmLoai.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\mypham.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quản lý cửa hàng mỹ phẩm2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

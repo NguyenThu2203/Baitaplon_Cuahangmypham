@@ -92,6 +92,7 @@ namespace Baitaplon_Cuahangmypham
             a.Show();
         }
 
+<<<<<<< HEAD
         private void mnuBaocaoBH_Click(object sender, EventArgs e)
         {
             frmBaocaobanhang a = new frmBaocaobanhang();
@@ -101,6 +102,11 @@ namespace Baitaplon_Cuahangmypham
         private void mnuTracuuKH_Click(object sender, EventArgs e)
         {
             frmTracuuKH a = new frmTracuuKH();  
+=======
+        private void mnuDanhmucHDN_Click(object sender, EventArgs e)
+        {
+            frmHoadonnhap a = new frmHoadonnhap();
+>>>>>>> 4a7e883250e4fc7ca2cf57a5fa20c8d02258e498
             a.Show(); 
         }
     }

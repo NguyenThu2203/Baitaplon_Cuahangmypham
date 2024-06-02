@@ -110,5 +110,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         {
             this.Close();
         }
+
+       
     }
 }
