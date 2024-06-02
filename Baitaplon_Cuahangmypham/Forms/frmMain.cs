@@ -100,6 +100,7 @@ namespace Baitaplon_Cuahangmypham
         private void mnuTracuuKH_Click(object sender, EventArgs e)
         {
             frmTracuuKH a = new frmTracuuKH();
+            a.Show();
         }
         private void mnuDanhmucHDN_Click(object sender, EventArgs e)
         {
