@@ -25,7 +25,6 @@ namespace Baitaplon_Cuahangmypham.Forms
             Class.Functions.Connect();
             //MessageBox.Show("Ket noi thanh cong:");
             load_datagrid();
-            //load_datagridsp();
             Functions.FillCombo("select SoHDB from tblHoadonban", cboSoHDB, "SoHDB", "SoHDB");
             Functions.FillCombo("select Tenhang from tblHanghoa", cbotensp, "Tenhang", "Tenhang");
             Functions.FillCombo("select MaKH from tblKhachhang", cbokhachhang, "MaKH", "MaKH");
@@ -57,18 +56,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             dgridCTHDB.AllowUserToAddRows = false;
             dgridCTHDB.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
-        //private void load_datagridsp()
-        //{
-        //    string sql;
-        //    sql = "select Tenhang, sum(cthdb.Soluong) from tblHanghoa hh join tblChitiethoadonban cthdb on hh.Mahang=cthdb.Mahang group by Tenhang order by sum(cthdb.Soluong) DESC";
-        //    tblSP = Class.Functions.GetDataToTable(sql);
-        //    dgridSP.DataSource = tblSP;
-        //    dgridSP.Columns[0].HeaderText = "Tên hàng ";
-        //    dgridSP.Columns[1].HeaderText = "Số lượng bán";
-
-        //    dgridSP.AllowUserToAddRows = false;
-        //    dgridSP.EditMode = DataGridViewEditMode.EditProgrammatically;
-        //}
+        
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {

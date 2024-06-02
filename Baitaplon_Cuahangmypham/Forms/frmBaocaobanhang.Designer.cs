@@ -90,7 +90,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1246, 226);
             this.groupBox1.TabIndex = 80;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "tìm kiếm ";
+            this.groupBox1.Text = "Tìm kiếm";
             // 
             // grbkhoang
             // 
