@@ -80,22 +80,28 @@ namespace Baitaplon_Cuahangmypham
             a.Show();
         }
 
-        private void mnuTracuuKH_Click(object sender, EventArgs e)
-        {
-            frmTracuuKH a = new frmTracuuKH();
-            a.Show();
-        }
-
         private void mnuKhachhang_Click(object sender, EventArgs e)
         {
-            frmkhach a = new frmkhach();
-            a.Show();
+            //frmkhach a = new frmkhach();
+            //a.Show();
         }
 
         private void mnuBaocaoDT_Click(object sender, EventArgs e)
         {
             frmBaocaodoanhthu a = new frmBaocaodoanhthu();
             a.Show();
+        }
+
+        private void mnuBaocaoBH_Click(object sender, EventArgs e)
+        {
+            frmBaocaobanhang a = new frmBaocaobanhang();
+            a.Show();
+        }
+
+        private void mnuTracuuKH_Click(object sender, EventArgs e)
+        {
+            frmTracuuKH a = new frmTracuuKH();  
+            a.Show(); 
         }
     }
 }

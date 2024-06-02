@@ -85,22 +85,15 @@ namespace Baitaplon_Cuahangmypham.Forms
             resetvalue();
             load_datagrid();
         }
-        private void dgridTimkiemkH_DoubleClick(object sender, EventArgs e)
-        {
-            string makh;
-            if (MessageBox.Show("Bạn có muốn hiển thị thông tin chi tiết?? ", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                makh = dgridTimkiemkH.CurrentRow.Cells["MaKH"].Value.ToString();
-                frmKhachhang frm = new frmKhachhang();
-                frm.txtMaKH.Text = makh;
-                frm.StartPosition = FormStartPosition.CenterParent;
-                frm.ShowDialog();
-            }
-        }
 
         private void btnDong_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Bạn có muốn đóng cửa sổ này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
     }
 }
