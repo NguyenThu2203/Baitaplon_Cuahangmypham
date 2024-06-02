@@ -116,7 +116,7 @@
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(775, 582);
+            this.btnDong.Location = new System.Drawing.Point(782, 560);
             this.btnDong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(84, 41);
@@ -127,7 +127,7 @@
             // 
             // btnBoqua
             // 
-            this.btnBoqua.Location = new System.Drawing.Point(634, 582);
+            this.btnBoqua.Location = new System.Drawing.Point(641, 560);
             this.btnBoqua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBoqua.Name = "btnBoqua";
             this.btnBoqua.Size = new System.Drawing.Size(84, 41);
@@ -138,7 +138,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(485, 582);
+            this.btnLuu.Location = new System.Drawing.Point(492, 560);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(84, 41);
@@ -149,7 +149,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(205, 582);
+            this.btnSua.Location = new System.Drawing.Point(212, 560);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(84, 41);
@@ -160,7 +160,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(336, 582);
+            this.btnXoa.Location = new System.Drawing.Point(343, 560);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(84, 41);
@@ -171,7 +171,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(70, 582);
+            this.btnThem.Location = new System.Drawing.Point(77, 560);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(84, 41);
@@ -184,7 +184,7 @@
             // 
             this.dgridNhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridNhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridNhanvien.Location = new System.Drawing.Point(54, 316);
+            this.dgridNhanvien.Location = new System.Drawing.Point(59, 305);
             this.dgridNhanvien.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgridNhanvien.Name = "dgridNhanvien";
             this.dgridNhanvien.ReadOnly = true;

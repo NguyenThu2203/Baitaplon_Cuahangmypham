@@ -96,7 +96,8 @@ namespace Baitaplon_Cuahangmypham.Forms
         private void ResetValues()
         {
             txtMahoadon.Text = "";
-            mskNgayban.Text = DateTime.Now.ToShortDateString();
+            mskNgayban.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            //mskNgayban.Text = DateTime.Now.ToShortDateString();
             txtTennhanvien.Text = "";
             txtTenkhachhang.Text = "";
             mskDienthoai.Text = "";

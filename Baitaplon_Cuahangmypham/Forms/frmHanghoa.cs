@@ -401,7 +401,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((txtMahang.Text == "") && (txtTenhang.Text == "") && (cboMachatlieu.Text == ""))
+            if ((txtMahang.Text == "") && (txtTenhang.Text == ""))
             {
                 MessageBox.Show("Hãy nhập một điều kiện tìm kiếm!!!", "Yêu cầu nhập điều kiện", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -411,8 +411,6 @@ namespace Baitaplon_Cuahangmypham.Forms
                 sql = sql + " AND Mahang Like N'%" + txtMahang.Text + "%'";
             if (txtTenhang.Text != "")
                 sql = sql + " AND Tenhang Like N'%" + txtTenhang.Text + "%'";
-            if (cboMachatlieu.Text != "")
-                sql = sql + " AND Machatlieu Like N'%" + cboMachatlieu.SelectedValue + "%'";
             tblHH = Functions.GetDataToTable(sql);
             if (tblHH.Rows.Count == 0)
                 MessageBox.Show("Không có bản ghi thỏa mãn điều kiện!!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

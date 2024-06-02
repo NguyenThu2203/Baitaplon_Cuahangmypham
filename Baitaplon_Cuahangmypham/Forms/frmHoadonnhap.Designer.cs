@@ -112,14 +112,12 @@
             // 
             // btnBoqua
             // 
-            this.btnBoqua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBoqua.Location = new System.Drawing.Point(468, 386);
+            this.btnBoqua.Location = new System.Drawing.Point(458, 418);
             this.btnBoqua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBoqua.Name = "btnBoqua";
-            this.btnBoqua.Size = new System.Drawing.Size(154, 105);
+            this.btnBoqua.Size = new System.Drawing.Size(97, 52);
             this.btnBoqua.TabIndex = 60;
             this.btnBoqua.Text = "Bỏ qua";
-            this.btnBoqua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBoqua.UseVisualStyleBackColor = true;
             this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 
@@ -151,7 +149,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1436, 542);
+            this.groupBox2.Size = new System.Drawing.Size(1267, 487);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin các mặt hàng";
@@ -250,25 +248,22 @@
             // 
             // btnDong
             // 
-            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.Location = new System.Drawing.Point(1081, 386);
+            this.btnDong.Location = new System.Drawing.Point(894, 418);
             this.btnDong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(136, 105);
+            this.btnDong.Size = new System.Drawing.Size(136, 52);
             this.btnDong.TabIndex = 59;
             this.btnDong.Text = "Đóng";
-            this.btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDong.UseVisualStyleBackColor = true;
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(73, 386);
+            this.btnThem.Location = new System.Drawing.Point(171, 416);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(197, 105);
+            this.btnThem.Size = new System.Drawing.Size(137, 56);
             this.btnThem.TabIndex = 52;
             this.btnThem.Text = "Thêm hóa đơn";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -286,14 +281,12 @@
             // 
             // btnIn
             // 
-            this.btnIn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIn.Location = new System.Drawing.Point(659, 386);
+            this.btnIn.Location = new System.Drawing.Point(593, 419);
             this.btnIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(162, 105);
+            this.btnIn.Size = new System.Drawing.Size(104, 53);
             this.btnIn.TabIndex = 58;
             this.btnIn.Text = "In hóa đơn";
-            this.btnIn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIn.UseVisualStyleBackColor = true;
             this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
@@ -308,14 +301,12 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(303, 386);
+            this.btnLuu.Location = new System.Drawing.Point(328, 416);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(142, 105);
+            this.btnLuu.Size = new System.Drawing.Size(107, 56);
             this.btnLuu.TabIndex = 56;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
@@ -330,14 +321,12 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuy.Location = new System.Drawing.Point(856, 386);
+            this.btnHuy.Location = new System.Drawing.Point(732, 419);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(192, 105);
+            this.btnHuy.Size = new System.Drawing.Size(134, 51);
             this.btnHuy.TabIndex = 57;
             this.btnHuy.Text = "Hủy hóa đơn";
-            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -564,8 +553,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(606, 40);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(452, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(285, 38);
             this.label1.TabIndex = 37;
@@ -576,7 +565,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1546, 1050);
+            this.ClientSize = new System.Drawing.Size(1248, 1013);
             this.Controls.Add(this.btnTimkiem);
             this.Controls.Add(this.cboMahoadonnhap);
             this.Controls.Add(this.label5);

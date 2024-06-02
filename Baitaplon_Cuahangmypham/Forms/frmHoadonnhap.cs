@@ -118,7 +118,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             btnIn.Enabled = false;
             btnThem.Enabled = false;
             ResetValues();
-            txtMahoadonnhap.Text = Functions.createkey("I");
+            txtMahoadonnhap.Text = Functions.CreateKey("I");
             LoadDataGridViewChitietHDN();
         }
 
