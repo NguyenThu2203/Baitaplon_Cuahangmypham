@@ -74,6 +74,11 @@ namespace Baitaplon_Cuahangmypham.Forms
             dgridTimhoadonnhap.Columns[2].HeaderText = "Ngày nhập";
             dgridTimhoadonnhap.Columns[3].HeaderText = "Mã nhà cung cấp";
             dgridTimhoadonnhap.Columns[4].HeaderText = "Tổng tiền";
+            dgridTimhoadonnhap.Columns[0].Width = 150;
+            dgridTimhoadonnhap.Columns[1].Width = 150;
+            dgridTimhoadonnhap.Columns[2].Width = 150;
+            dgridTimhoadonnhap.Columns[3].Width = 150;
+            dgridTimhoadonnhap.Columns[4].Width = 150;
             dgridTimhoadonnhap.AllowUserToAddRows = false;
             dgridTimhoadonnhap.EditMode = DataGridViewEditMode.EditProgrammatically;
         }

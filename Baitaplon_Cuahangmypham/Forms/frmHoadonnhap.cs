@@ -106,7 +106,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             dgridChitietHDN.Columns[3].HeaderText = "Đơn giá nhập";
             dgridChitietHDN.Columns[4].HeaderText = "Giảm giá %";
             dgridChitietHDN.Columns[5].HeaderText = "Thành tiền";
-            dgridChitietHDN.Columns[0].Width = 80;
+            dgridChitietHDN.Columns[0].Width = 130;
             dgridChitietHDN.Columns[1].Width = 130;
             dgridChitietHDN.Columns[2].Width = 80;
             dgridChitietHDN.Columns[3].Width = 90;
