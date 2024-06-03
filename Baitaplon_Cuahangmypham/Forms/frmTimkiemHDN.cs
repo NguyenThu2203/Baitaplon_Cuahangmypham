@@ -99,7 +99,8 @@ namespace Baitaplon_Cuahangmypham.Forms
             {
                 mahd = dgridTimhoadonnhap.CurrentRow.Cells["SoHDN"].Value.ToString();
                 frmHoadonnhap frm = new frmHoadonnhap();
-                txtMahoadonnhap.Text = mahd;
+                //frm.txtMahoadonnhap.Text = mahd;
+                frm.getMahoadonnhap(mahd);
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.ShowDialog();
 

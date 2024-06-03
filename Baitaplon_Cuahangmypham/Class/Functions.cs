@@ -18,8 +18,8 @@ namespace Baitaplon_Cuahangmypham.Class
             //connString = "Data Source=XIAODOU;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
             //connString = "Data Source=LAPTOP-9FSA2OM9\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
             //connString = "Data Source=DESKTOP-NM815JH\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
-            connString = "Data Source=LAPTOP-O3TH1H5S\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
-
+            //connString = "Data Source=LAPTOP-O3TH1H5S\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
+            connString = "Data Source=LAPTOP-8CQUN76N\\sqlexpress;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
             //connString = "Data Source=LAPTOP-9FSA2OM9\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
             //connString = "Data Source=DESKTOP-NM815JH\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
             //connString = "Data Source=LAPTOP-9FSA2OM9\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";

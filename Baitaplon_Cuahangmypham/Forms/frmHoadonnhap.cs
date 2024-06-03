@@ -14,6 +14,11 @@ namespace Baitaplon_Cuahangmypham.Forms
 {
     public partial class frmHoadonnhap : Form
     {
+        public void getMahoadonnhap(string Mahoadonnhap)
+        {
+            txtMahoadonnhap.Text = Mahoadonnhap;
+        }
+
         public frmHoadonnhap()
         {
             InitializeComponent();
@@ -622,6 +627,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 this.Close(); 
             }
         }
+
 
         private void ResetValuesHang()
         {

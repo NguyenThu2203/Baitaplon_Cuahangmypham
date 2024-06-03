@@ -36,25 +36,22 @@ namespace Baitaplon_Cuahangmypham.Forms
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             string sql;
-            if ((txtMahoadonban.Text == "") && (txtThang.Text == "") && (txtNam.Text == "") &&
-               (txtManhanvien.Text == "") && (txtMahoadonban.Text == "") &&
-               (txtTongtien.Text == ""))
+            if ((txtMahoadonban.Text == "") && (txtThang.Text == "") && (txtNam.Text == "") &&(txtManhanvien.Text == "") && (txtMahoadonban.Text == "") &&(txtTongtien.Text == ""))
             {
-                MessageBox.Show("Hãy nhập một điều kiện tìm kiếm!!!", "Yeu cau ...",
-    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Hãy nhập một điều kiện tìm kiếm!!!", "Yeu cau ...",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            sql = "SELECT * FROM tblHDBan WHERE 1=1";
+            sql = "SELECT * FROM tblHoadonban WHERE 1=1";
             if (txtMahoadonban.Text != "")
-                sql = sql + " AND MaHDBan Like N'%" + txtMahoadonban.Text + "%'";
+                sql = sql + " AND SoHDB Like N'%" + txtMahoadonban.Text + "%'";
             if (txtThang.Text != "")
                 sql = sql + " AND MONTH(Ngayban) =" + txtThang.Text;
             if (txtNam.Text != "")
                 sql = sql + " AND YEAR(Ngayban) =" + txtNam.Text;
             if (txtManhanvien.Text != "")
-                sql = sql + " AND Manhanvien Like N'%" + txtManhanvien.Text + "%'";
+                sql = sql + " AND MaNV Like N'%" + txtManhanvien.Text + "%'";
             if (txtMakhachhang.Text != "")
-                sql = sql + " AND Makhach Like N'%" + txtMakhachhang.Text + "%'";
+                sql = sql + " AND MaKH Like N'%" + txtMakhachhang.Text + "%'";
             if (txtTongtien.Text != "")
                 sql = sql + " AND Tongtien <=" + txtTongtien.Text;
             tblHDB = Functions.GetDataToTable(sql);
@@ -86,18 +83,24 @@ namespace Baitaplon_Cuahangmypham.Forms
             dgridTimhoadonban.DataSource = null;
 
         }
+        private void txtTongtien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (((e.KeyChar >= '0') && (e.KeyChar <= '9')) || (Convert.ToInt32(e.KeyChar) == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+        }
 
         private void dgridTimhoadonban_DoubleClick(object sender, EventArgs e)
         {
-            string mahd = dgridTimhoadonban.CurrentRow.Cells["SoHDN"].Value.ToString();
+            string mahdb = dgridTimhoadonban.CurrentRow.Cells["SoHDB"].Value.ToString();
             if (MessageBox.Show("Bạn có muốn hiển thị thông tin chi tiết?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                mahd = dgridTimhoadonban.CurrentRow.Cells["SoHDN"].Value.ToString();
-                frmHoadonnhap frm = new frmHoadonnhap();
-                txtMahoadonban.Text = mahd;
-                frm.StartPosition = FormStartPosition.CenterScreen;
+                mahdb = dgridTimhoadonban.CurrentRow.Cells["SoHDB"].Value.ToString();
+                frmHoadonban frm = new frmHoadonban();
+                frm.getMahoadon(mahdb);
+                frm.StartPosition = FormStartPosition.CenterParent;
                 frm.ShowDialog();
-
             }
         }
 

@@ -14,6 +14,12 @@ namespace Baitaplon_Cuahangmypham.Forms
 {
     public partial class frmHoadonban : Form
     {
+       // public TextBox txtMahoadon;
+       public void getMahoadon(string Mahoadon) 
+        {
+            txtMahoadon.Text= Mahoadon;
+        }
+
         public frmHoadonban()
         {
             InitializeComponent();
@@ -56,8 +62,11 @@ namespace Baitaplon_Cuahangmypham.Forms
                 btnHuyhoadon.Enabled = true;
                 btnInhoadon.Enabled = true;
             }
+ 
             Load_DataGridView();
         }
+       
+
         private void Load_DataGridView()
         {
             string sql;
