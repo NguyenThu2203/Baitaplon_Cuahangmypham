@@ -290,6 +290,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 sql = "DELETE tblHoadonnhap WHERE SoHDN=N'" + txtMahoadonnhap.Text + "'";
                 Functions.RunSql(sql);
                 ResetValues();
+                Load_DataGridViewHoadonnhap(); 
                 LoadDataGridViewChitietHDN();
                 btnHuy.Enabled = false;
                 btnIn.Enabled = false;

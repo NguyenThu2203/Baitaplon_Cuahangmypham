@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using COMExcel = Microsoft.Office.Interop.Excel;
 
 namespace Baitaplon_Cuahangmypham.Forms
 {
@@ -20,12 +21,6 @@ namespace Baitaplon_Cuahangmypham.Forms
 
         private void frmHanghoa_Load(object sender, EventArgs e)
         {
-            txtMahang.Enabled = false;
-            btnLuu.Enabled = false;
-            btnBoqua.Enabled = false;
-            txtMahang.Enabled = true;
-            txtDongiaban.Enabled = false;
-            txtDongianhap.Enabled = false;
             Load_DataGridView();
             Class.Functions.FillCombo("SELECT Machatlieu, Tenchatlieu FROM tblChatlieu", cboMachatlieu, "Machatlieu", "Tenchatlieu");
             cboMachatlieu.SelectedIndex = -1;
@@ -43,6 +38,12 @@ namespace Baitaplon_Cuahangmypham.Forms
             cboMamau.SelectedIndex = -1;
             Class.Functions.FillCombo("SELECT Manuocsx, Tennuocsx FROM tblNuocsanxuat", cboManuocSX, "Manuocsx", "Tennuocsx");
             cboManuocSX.SelectedIndex = -1;
+            btnLuu.Enabled = false;
+            btnBoqua.Enabled = false; 
+            txtMahang.Enabled = true;
+            txtDongiaban.Enabled = false;
+            txtDongianhap.Enabled = false;
+            txtMahang.Enabled = false; 
         }
         DataTable tblHH; 
         private void Load_DataGridView()
@@ -71,6 +72,7 @@ namespace Baitaplon_Cuahangmypham.Forms
 
         private void dgridHanghoa_Click(object sender, EventArgs e)
         {
+            btnBoqua.Enabled = true; 
             if (btnThem.Enabled == false)
             {
                 MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -137,6 +139,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 picAnh.Image = Image.FromFile(dlopen.FileName);
             }
             txtAnh.Text = dlopen.FileName;
+            btnBoqua.Enabled = true; 
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -246,7 +249,6 @@ namespace Baitaplon_Cuahangmypham.Forms
                 return;
             }
             txtDongiaban.Text = (Convert.ToInt32(txtDongiaban.Text) * 0.11).ToString();
-            //nhập hàng hóa xong sẽ nhập hóa đơn nhập, sau đó sẽ điền các thông tin hàng hóa
             sql = "Select Mahang from tblHanghoa where Mahang = N'" + txtMahang.Text + "'";
             if (Class.Functions.Checkey(sql))
             {
@@ -389,8 +391,6 @@ namespace Baitaplon_Cuahangmypham.Forms
                 return;
             }
             string sql;
-            //Lỗi: Nếu không sửa hết các combobox khác thì sẽ có lỗi 
-
             sql = "update tblHanghoa set Tenhang = N'" + txtTenhang.Text + "', Maloai = N'" + cboMaloai.SelectedValue.ToString() + "', Makhoiluong = N'" + cboMakhoiluong.SelectedValue.ToString() + "', Mahangsx = N'" + cboMahangsx.SelectedValue.ToString() + "', Machatlieu = N'" + cboMachatlieu.SelectedValue.ToString() + "', Macongdung = N'" + cboMacongdung.SelectedValue.ToString() + "', Mamua = N'" + cboMamua.SelectedValue.ToString() + "', Anh = N'" + txtAnh.Text + "', Ghichu = N'" + txtGhichu.Text + "', Mamau = N'" + cboMamau.SelectedValue.ToString() + "', ManuocSX = N'" + cboManuocSX.SelectedValue.ToString() + "', Dongiaban = " + txtDongiaban.Text + " where Mahang = N'" + txtMahang.Text.Trim() + "'";
             Class.Functions.RunSql(sql);
             Load_DataGridView();
@@ -419,6 +419,7 @@ namespace Baitaplon_Cuahangmypham.Forms
 
             dgridHanghoa.DataSource = tblHH;
             resetvalue();
+            btnBoqua.Enabled = true; 
         }
 
         private void btnHienthiDS_Click(object sender, EventArgs e)
@@ -443,6 +444,87 @@ namespace Baitaplon_Cuahangmypham.Forms
                 e.Handled = false;
             else
                 e.Handled = true;
+        }
+
+        private void btnInHH_Click(object sender, EventArgs e)
+        {
+            string sql = "Select Mahang, TenHang, Maloai, Makhoiluong, Mahangsx, Machatlieu, Macongdung, Mamua, Mamau, ManuocSX, Soluong, Thoigianbaohanh,Dongianhap,Dongiaban from tblHanghoa";
+            tblHH = Class.Functions.GetDataToTable(sql);
+            // Khởi động chương trình Excel
+            COMExcel.Application exApp = new COMExcel.Application();
+            COMExcel.Workbook exBook; //Trong 1 chương trình Excel có nhiều Workbook
+            COMExcel.Worksheet exSheet; //Trong 1 Workbook có nhiều Worksheet
+            COMExcel.Range exRange;
+            int hang = 0, cot = 0;
+            exBook = exApp.Workbooks.Add(COMExcel.XlWBATemplate.xlWBATWorksheet);
+            exSheet = exBook.Worksheets[1];
+            // Định dạng chung
+            exRange = exSheet.Cells[1, 1];
+            exRange.Range["A1:B3"].Font.Size = 10;
+            exRange.Range["A1:B3"].Font.Name = "Times new roman";
+            exRange.Range["A1:B3"].Font.Bold = true;
+            exRange.Range["A1:B3"].Font.ColorIndex = 5; //Màu xanh da trời
+            exRange.Range["A1:A1"].ColumnWidth = 7;
+            exRange.Range["B1:B1"].ColumnWidth = 15;
+            exRange.Range["A1:B1"].MergeCells = true;
+            exRange.Range["A1:B1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["A1:B1"].Value = "Shop Lâm Anh";
+
+            exRange.Range["A2:B2"].MergeCells = true;
+            exRange.Range["A2:B2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["A2:B2"].Value = "Cầu Giấy - Hà Nội";
+
+            exRange.Range["A3:B3"].MergeCells = true;
+            exRange.Range["A3:B3"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["A3:B3"].Value = "Điện thoại: (04)37562222";
+
+
+            exRange.Range["C2:E2"].Font.Size = 16;
+            exRange.Range["C2:E2"].Font.Name = "Times new roman";
+            exRange.Range["C2:E2"].Font.Bold = true;
+            exRange.Range["C2:E2"].Font.ColorIndex = 3; //Màu đỏ
+            exRange.Range["C2:E2"].MergeCells = true;
+            exRange.Range["C2:E2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["C2:E2"].Value = "HÀNG HÓA TẠI CỬA HÀNG";
+            // Biểu diễn thông tin chung của hóa đơn bán
+            //Lấy thông tin các mặt hàng
+            //Tạo dòng tiêu đề bảng
+            exRange.Range["A6:O6"].Font.Bold = true;
+            exRange.Range["A6:O6"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exRange.Range["C6:O6"].ColumnWidth = 12;
+            exRange.Range["A6:A6"].Value = "STT";
+            exRange.Range["B6:B6"].Value = "Mã hàng";
+            exRange.Range["C6:C6"].Value = "Tên hàng";
+            exRange.Range["D6:D6"].Value = "Loại";
+            exRange.Range["E6:E6"].Value = "Khối lượng";
+            exRange.Range["F6:F6"].Value = "Hãng sản xuất";
+            exRange.Range["G6:G6"].Value = "Chất liệu";
+            exRange.Range["H6:H6"].Value = "Công dụng";
+            exRange.Range["I6:I6"].Value = "Mùa";
+            exRange.Range["J6:J6"].Value = "Màu";
+            exRange.Range["K6:K6"].Value = "Nước sản xuất";
+            exRange.Range["L6:L6"].Value = "Số lượng";
+            exRange.Range["M6:M6"].Value = "Đơn giá nhập";
+            exRange.Range["N6:N6"].Value = "Đơn giá bán";
+            exRange.Range["O6:O6"].Value = "Thời gian bảo hành";
+            for (hang = 0; hang <= tblHH.Rows.Count - 1; hang++)
+            {
+                //Điền số thứ tự vào cột 1 từ dòng 12
+                exSheet.Cells[1][hang + 7] = hang + 1;
+                for (cot = 0; cot <= tblHH.Columns.Count - 1; cot++)
+                    //Điền thông tin hàng từ cột thứ 2, dòng 12
+                    exSheet.Cells[cot + 2][hang + 7] = tblHH.Rows[hang][cot].ToString();
+            }
+            exRange = exSheet.Cells[cot][hang + 14];
+            exRange.Range["A2:C2"].MergeCells = true;
+            exRange.Range["A2:C2"].Font.Italic = true;
+            exRange.Range["A2:C2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter; 
+            exRange.Range["A2:C2"].Value = "Hà Nội, ngày " + DateTime.Now.ToString("dd/MM/yyyy");
+            exRange.Range["A6:C6"].MergeCells = true;
+            exRange.Range["A6:C6"].Font.Italic = true;
+            exRange.Range["A6:C6"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
+            exSheet.Name = "Hàng hóa";
+            exApp.Visible = true;
         }
     }
 }

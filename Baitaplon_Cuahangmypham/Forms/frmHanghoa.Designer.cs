@@ -76,9 +76,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtDongianhap = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnInHH = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgridHanghoa)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -500,6 +501,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnInHH);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
@@ -537,9 +539,18 @@
             this.groupBox1.Controls.Add(this.txtDongianhap);
             this.groupBox1.Location = new System.Drawing.Point(27, 51);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(947, 356);
+            this.groupBox1.Size = new System.Drawing.Size(947, 353);
             this.groupBox1.TabIndex = 92;
             this.groupBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(593, 333);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(248, 20);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "Lưu ý: Nhập tên hàng để tìm kiếm.";
             // 
             // label6
             // 
@@ -559,14 +570,21 @@
             this.label3.TabIndex = 75;
             this.label3.Text = "Tên hàng";
             // 
-            // label4
+            // btnInHH
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(585, 320);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(338, 20);
-            this.label4.TabIndex = 81;
-            this.label4.Text = "Lưu ý: Nhập Mã hàng và Tên hàng để tìm kiếm.";
+            this.btnInHH.AutoEllipsis = true;
+            this.btnInHH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnInHH.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnInHH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInHH.ForeColor = System.Drawing.Color.Transparent;
+            this.btnInHH.Location = new System.Drawing.Point(770, 273);
+            this.btnInHH.Name = "btnInHH";
+            this.btnInHH.Size = new System.Drawing.Size(140, 40);
+            this.btnInHH.TabIndex = 93;
+            this.btnInHH.Text = "Xuất file ";
+            this.btnInHH.UseVisualStyleBackColor = false;
+            this.btnInHH.Click += new System.EventHandler(this.btnInHH_Click);
             // 
             // frmHanghoa
             // 
@@ -655,5 +673,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnInHH;
     }
 }

@@ -11,14 +11,14 @@ namespace Baitaplon_Cuahangmypham.Class
 {
     internal class Functions
     {
-            public static SqlConnection Conn;  //Khai báo đối tượng kết nối
-            public static string connString;   //Khai báo biến chứa chuỗi kết nối
+            public static SqlConnection Conn;  
+            public static string connString;   
             public static void Connect()
-            {            
-            connString = "Data Source=LAPTOP-O3TH1H5S\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
-            Conn = new SqlConnection();                 //Cấp phát đối tượng
-            Conn.ConnectionString = connString;         //Kết nối
-            Conn.Open();                                //Mở kết nối
+            {
+            connString = "Data Source=DESKTOP-NM815JH\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
+            Conn = new SqlConnection();                 
+            Conn.ConnectionString = connString;         
+            Conn.Open();                                
             }
             public static DataTable GetDataToTable(string sql)
             {
