@@ -33,9 +33,10 @@
             this.cboMahoadonban = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnHuyhoadon = new System.Windows.Forms.Button();
             this.txtTongtien = new System.Windows.Forms.TextBox();
             this.btnLuuhoadon = new System.Windows.Forms.Button();
-            this.btnHuyhoadon = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnInhoadon = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
             this.btnThemhoadon = new System.Windows.Forms.Button();
@@ -123,9 +124,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnHuyhoadon);
             this.groupBox2.Controls.Add(this.txtTongtien);
             this.groupBox2.Controls.Add(this.btnLuuhoadon);
-            this.groupBox2.Controls.Add(this.btnHuyhoadon);
+            this.groupBox2.Controls.Add(this.btnReset);
             this.groupBox2.Controls.Add(this.btnInhoadon);
             this.groupBox2.Controls.Add(this.btnDong);
             this.groupBox2.Controls.Add(this.btnThemhoadon);
@@ -143,6 +145,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin các mặt hàng";
             // 
+            // btnHuyhoadon
+            // 
+            this.btnHuyhoadon.Location = new System.Drawing.Point(459, 664);
+            this.btnHuyhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHuyhoadon.Name = "btnHuyhoadon";
+            this.btnHuyhoadon.Size = new System.Drawing.Size(150, 49);
+            this.btnHuyhoadon.TabIndex = 25;
+            this.btnHuyhoadon.Text = "Hủy hóa đơn";
+            this.btnHuyhoadon.UseVisualStyleBackColor = true;
+            this.btnHuyhoadon.Click += new System.EventHandler(this.btnHuyhoadon_Click);
+            // 
             // txtTongtien
             // 
             this.txtTongtien.Location = new System.Drawing.Point(899, 556);
@@ -153,7 +166,7 @@
             // 
             // btnLuuhoadon
             // 
-            this.btnLuuhoadon.Location = new System.Drawing.Point(301, 664);
+            this.btnLuuhoadon.Location = new System.Drawing.Point(282, 664);
             this.btnLuuhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuuhoadon.Name = "btnLuuhoadon";
             this.btnLuuhoadon.Size = new System.Drawing.Size(145, 49);
@@ -162,20 +175,20 @@
             this.btnLuuhoadon.UseVisualStyleBackColor = true;
             this.btnLuuhoadon.Click += new System.EventHandler(this.btnLuuhoadon_Click);
             // 
-            // btnHuyhoadon
+            // btnReset
             // 
-            this.btnHuyhoadon.Location = new System.Drawing.Point(485, 664);
-            this.btnHuyhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHuyhoadon.Name = "btnHuyhoadon";
-            this.btnHuyhoadon.Size = new System.Drawing.Size(195, 49);
-            this.btnHuyhoadon.TabIndex = 23;
-            this.btnHuyhoadon.Text = "Hủy hóa đơn";
-            this.btnHuyhoadon.UseVisualStyleBackColor = true;
-            this.btnHuyhoadon.Click += new System.EventHandler(this.btnHuyhoadon_Click);
+            this.btnReset.Location = new System.Drawing.Point(631, 664);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(195, 49);
+            this.btnReset.TabIndex = 23;
+            this.btnReset.Text = "Bỏ qua";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnInhoadon
             // 
-            this.btnInhoadon.Location = new System.Drawing.Point(744, 664);
+            this.btnInhoadon.Location = new System.Drawing.Point(862, 664);
             this.btnInhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInhoadon.Name = "btnInhoadon";
             this.btnInhoadon.Size = new System.Drawing.Size(195, 49);
@@ -186,7 +199,7 @@
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(992, 664);
+            this.btnDong.Location = new System.Drawing.Point(1093, 664);
             this.btnDong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(153, 49);
@@ -594,7 +607,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtTongtien;
         private System.Windows.Forms.Button btnLuuhoadon;
-        private System.Windows.Forms.Button btnHuyhoadon;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnInhoadon;
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Button btnThemhoadon;
@@ -633,5 +646,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnHuyhoadon;
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         {
             btnThemhoadon.Enabled = true;
             btnLuuhoadon.Enabled = false;
-            btnHuyhoadon.Enabled = false;
+            btnReset.Enabled = false;
             btnInhoadon.Enabled = false;
             txtMahoadon.Enabled = true;
             txtTennhanvien.ReadOnly = true;
@@ -59,7 +60,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             if (txtMahoadon.Text != "")
             {
                 Load_ThongtinHD();
-                btnHuyhoadon.Enabled = true;
+                btnReset.Enabled = true;
                 btnInhoadon.Enabled = true;
             }
  
@@ -183,13 +184,15 @@ namespace Baitaplon_Cuahangmypham.Forms
 
         private void btnThemhoadon_Click(object sender, EventArgs e)
         {
-            btnHuyhoadon.Enabled = true;
+            btnReset.Enabled = true;
             btnLuuhoadon.Enabled = true;
             btnInhoadon.Enabled = true;
             btnThemhoadon.Enabled = false;
             ResetValues();
             ResetValuesHang();
             txtMahoadon.Text = Functions.CreateKey("ORD");
+            btnHuyhoadon.Enabled = false;
+            btnInhoadon.Enabled = false;
         }
 
         private void btnLuuhoadon_Click(object sender, EventArgs e)
@@ -269,14 +272,6 @@ namespace Baitaplon_Cuahangmypham.Forms
             }
         }
 
-        private void btnHuyhoadon_Click(object sender, EventArgs e)
-        {
-            ResetValues();
-            ResetValuesHang();
-            Load_DataGridView();
-            btnThemhoadon.Enabled = true;
-            mskNgayban.Text = "";
-        }
 
         private void btnInhoadon_Click(object sender, EventArgs e)
         {
@@ -409,9 +404,10 @@ namespace Baitaplon_Cuahangmypham.Forms
             txtMahoadon.Text = cboMahoadonban.Text;
             Load_ThongtinHD();
             Load_DataGridView();
-            btnHuyhoadon.Enabled = true;
-            btnLuuhoadon.Enabled = true;
+            btnReset.Enabled = true;
+            btnLuuhoadon.Enabled = false;
             btnInhoadon.Enabled = true;
+            btnHuyhoadon.Enabled = true;
             cboMahoadonban.SelectedIndex = -1;
         }
 
@@ -420,6 +416,10 @@ namespace Baitaplon_Cuahangmypham.Forms
             ResetValuesHang();
             btnBoqua.Enabled = false;
             cboMahang.Enabled = true;
+            btnInhoadon.Enabled = false;
+            btnHuyhoadon.Enabled = false;
+            btnLuuhoadon.Enabled = false;
+
         }
 
         private void dgridChitiethoadonban_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -444,16 +444,17 @@ namespace Baitaplon_Cuahangmypham.Forms
         }
         private void DelHang(string Mahoadon, string Mahang)
         {
-            Double s, sl, SLcon;
+            double sl, SLcon, slxoa;
+            //Double slxoa, sl, SLcon;
             string sql;
             sql = "SELECT Soluong FROM tblChitiethoadonban WHERE SoHDB = N'" + txtMahoadon.Text + "' AND Mahang = N'" + cboMahang.SelectedValue + "'";
-            s = Convert.ToDouble(Functions.getfieldvalues(sql));
+            slxoa = Convert.ToDouble(Functions.getfieldvalues(sql));
             sql = "DELETE tblChitiethoadonban WHERE SoHDB=N'" + txtMahoadon.Text + "' AND Mahang = N'" + cboMahang.SelectedValue + "'";
             Functions.RunSql(sql);
             // Cập nhật lại số lượng cho các mặt hàng
             sql = "SELECT Soluong FROM tblHanghoa WHERE Mahang = N'" + cboMahang.SelectedValue + "'";
             sl = Convert.ToDouble(Functions.getfieldvalues(sql));
-            SLcon = sl + s;
+            SLcon = sl + slxoa;
             sql = "UPDATE tblHanghoa SET Soluong =" + SLcon + " WHERE Mahang= N'" + cboMahang.SelectedValue + "'";
             Functions.RunSql(sql);
         }
@@ -489,6 +490,47 @@ namespace Baitaplon_Cuahangmypham.Forms
                 dg = Convert.ToDouble(txtDongiaban.Text);
             tt = sl * dg * (1 - gg);
             txtThanhtien.Text = tt.ToString();
+        }
+
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            ResetValues();
+            ResetValuesHang();
+            Load_DataGridView();
+            btnThemhoadon.Enabled = true;
+            mskNgayban.Text = "";
+        }
+
+        private void btnHuyhoadon_Click(object sender, EventArgs e)
+        {
+            double sl, SLcon, slxoa;
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string[] Mahang = new string[20];
+                    string sql;
+                    int n = 0;
+                    int i;
+                    sql = "SELECT Mahang FROM tblChitiethoadonban WHERE SoHDB = N'" +txtMahoadon.Text + "'";
+                    SqlCommand cmd = new SqlCommand(sql, Functions.Conn);
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Mahang[n] = reader.GetString(0).ToString();
+                        n = n + 1;
+                    }
+                    reader.Close();
+                //Xóa danh sách các mặt hàng của hóa đơn
+                //for (i = 0; i <= n - 1; i++)
+                    //DelHang(txtMahoadon.Text, Mahang[i]);
+                    //Xóa hóa đơn
+                    sql = "DELETE tblHoadonban WHERE SoHDB=N'" + txtMahoadon.Text + "'";
+                    Functions.RunSqlDel(sql);
+                    ResetValues();
+                    Load_DataGridView();
+                    //btnHuyhoadon.Enabled = false;
+                    btnInhoadon.Enabled = false;
+                }
         }
     }
 }

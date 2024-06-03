@@ -261,6 +261,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmTracuuHDB";
             this.Text = "frmTracuuHDB";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTracuuHDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridTimhoadonban)).EndInit();
             this.ResumeLayout(false);
