@@ -173,7 +173,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             if (!Functions.CheckKey(sql))
             {
                 // Mã hóa đơn chưa có, tiến hành lưu các thông tin chung
-                // Mã HDBan được sinh tự động do đó không có trường hợp trùng khóa
+                // Mã HDNhap được sinh tự động do đó không có trường hợp trùng khóa
                 if (mskNgaynhap.Text.Length == 0)
                 {
                     MessageBox.Show("Bạn phải nhập ngày nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -225,15 +225,8 @@ namespace Baitaplon_Cuahangmypham.Forms
                 cboMahang.Focus();
                 return;
             }
-            // Kiểm tra xem số lượng hàng trong kho còn đủ để cung cấp không?
+            
             sl = Convert.ToDouble(Functions.getfieldvalues("SELECT Soluong FROM tblHanghoa WHERE Mahang = N'" + cboMahang.SelectedValue + "'"));
-            if (Convert.ToDouble(txtSoluong.Text) > sl)
-            {
-                MessageBox.Show("Số lượng mặt hàng này chỉ còn " + sl, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtSoluong.Text = "";
-                txtSoluong.Focus();
-                return;
-            }
             sql = "INSERT INTO tblChitiethoadonnhap(SoHDN,Mahang,Soluong,Dongianhap, Giamgia,Thanhtien) VALUES(N'" + txtMahoadonnhap.Text.Trim() + "',N'" + cboMahang.SelectedValue + "'," + txtSoluong.Text + "," + txtDongianhap.Text + "," + txtGiamgia.Text + "," + txtThanhtien.Text + ")";
             Functions.RunSql(sql);
             LoadDataGridViewChitietHDN();
