@@ -185,11 +185,9 @@ namespace Baitaplon_Cuahangmypham.Forms
 
         private void btndong_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có muốn đóng cửa sổ này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-            if (result == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn đóng cửa sổ này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                Application.Exit();
+                this.Close();
             }
         }
 
