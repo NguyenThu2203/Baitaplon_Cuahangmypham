@@ -16,9 +16,10 @@ namespace Baitaplon_Cuahangmypham.Class
             public static void Connect()
             {
 
-           // connString = "Data Source=LAPTOP-O3TH1H5S\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
+            // connString = "Data Source=LAPTOP-O3TH1H5S\\SQLEXPRESS;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False"; 
 
-            connString = "Data Source=XIAODOU;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
+            //connString = "Data Source=XIAODOU;Initial Catalog=CuaHangMyPham;Integrated Security=True;Encrypt=False";
+            connString = "Data Source=LAPTOP-8CQUN76N\\SQLEXPRESS;Initial Catalog=\"Chuong 7\";Integrated Security=True;Encrypt=False";
 
             Conn = new SqlConnection();                 
             Conn.ConnectionString = connString;         
