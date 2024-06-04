@@ -83,10 +83,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             }
         }
 
-        private void frmBaocaodoanhthu_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
+      
 
         private void txtsoluong_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -329,11 +326,11 @@ namespace Baitaplon_Cuahangmypham.Forms
             exRange.Range["G5:G5"].Value = "Doanh Thu";
 
             // Điền dữ liệu vào bảng
-            for (hang = 0; hang < tblDoanhThu.Rows.Count; hang++)
+            for (hang = 0; hang < tbldoanhthu.Rows.Count; hang++)
             {
                 // Điền số thứ tự vào cột 1 từ dòng 6
                 exSheet.Cells[1][hang + 6] = hang + 1;
-                for (cot = 0; cot < tblDoanhThu.Columns.Count; cot++)
+                for (cot = 0; cot < tbldoanhthu.Columns.Count; cot++)
                 {
                     // Điền thông tin hàng từ cột thứ 2, dòng 6
                     exSheet.Cells[cot + 2][hang + 6] = tblDoanhThu.Rows[hang][cot].ToString();
@@ -342,32 +339,31 @@ namespace Baitaplon_Cuahangmypham.Forms
 
             // Tính tổng doanh thu
             double dt = tbldoanhthu.AsEnumerable().Sum(row => row.Field<double>("doanhthu"));
-            exRange = exSheet.Cells[6][tblDoanhThu.Rows.Count + 6];
-            exRange.Font.Bold = true;
-            exRange.Value2 = "Tổng tiền:";
-            exRange = exSheet.Cells[7][tblDoanhThu.Rows.Count + 6];
-            exRange.Font.Bold = true;
-            exRange.Value2 = dt.ToString("C2");
-
-            // Chuyển đổi số thành chữ (giả sử bạn có hàm `ChuyenSoSangChu`)
-            exRange = exSheet.Cells[1][tblDoanhThu.Rows.Count + 7];
+            exRange = exSheet.Cells[1][tbldoanhthu.Rows.Count + 6];
             exRange.Range["A1:F1"].MergeCells = true;
             exRange.Range["A1:F1"].Font.Bold = true;
+            exRange.Range["A1:F1"].Font.Italic = true;
+            exRange.Range["A1:F1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignRight;
+            exRange.Range["A1:F1"].Value = "Tổng tiền:";
+            exRange.Range["G1:G1"].Value = dt.ToString("F2");
+            // Chuyển đổi số thành chữ 
+            exRange = exSheet.Cells[1][tbldoanhthu.Rows.Count + 7];
+            exRange.Range["A1:F1"].MergeCells = true;
+            //exRange.Range["A1:F1"].Font.Bold = true;
             exRange.Range["A1:F1"].Font.Italic = true;
             exRange.Range["A1:F1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignRight;
             exRange.Range["A1:F1"].Value = "Bằng chữ: " + Functions.ChuyenSoSangChu(dt.ToString());
 
             // Ngày tháng
             DateTime currentTime = DateTime.Now;
-
-            DateTime ngayBan = Convert.ToDateTime(tblDoanhThu.Rows[0]["ngayban"]);
-            exRange = exSheet.Cells[4][tblDoanhThu.Rows.Count + 9];
+            DateTime ngayBan = Convert.ToDateTime(tbldoanhthu.Rows[0]["ngayban"]);
+            exRange = exSheet.Cells[4][tbldoanhthu.Rows.Count + 9];
             exRange.Range["A1:C1"].MergeCells = true;
             exRange.Range["A1:C1"].Font.Italic = true;
             exRange.Range["A1:C1"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exRange.Range["A1:C1"].Value = "Hà Nội, ngày " + currentTime.Day + " tháng " + currentTime.Month + " năm " + currentTime.Year;
 
-            exRange = exSheet.Cells[4][tblDoanhThu.Rows.Count + 10];
+            exRange = exSheet.Cells[4][tbldoanhthu.Rows.Count + 10];
             exRange.Range["A2:C2"].MergeCells = true;
             exRange.Range["A2:C2"].Font.Italic = true;
             exRange.Range["A2:C2"].HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;

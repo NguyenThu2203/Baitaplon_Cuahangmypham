@@ -338,7 +338,6 @@
             this.Name = "frmBaocaodoanhthu";
             this.Text = "frmBaocaodoanhthu";
             this.Load += new System.EventHandler(this.frmBaocaodoanhthu_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmBaocaodoanhthu_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.Dgriddoanhthu)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
