@@ -66,7 +66,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             if (txtDiachi.Text != "")
                 sql = sql + " AND Diachi Like N'%" + txtDiachi.Text.Trim().ToString() + "%'";
             if (mskdienthoai.Text != "(   )    -")
-                sql = sql + " AND Dienthoai Like N'%" + mskdienthoai.Text + "%'";
+                sql = sql + " AND Dienthoai Like N'%" + mskdienthoai.Text.ToString() + "%'";
 
             tblTKKH = Class.Functions.GetDataToTable(sql);
             dgridTimkiemkH.DataSource = tblTKKH;
@@ -98,6 +98,15 @@ namespace Baitaplon_Cuahangmypham.Forms
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgridTimkiemkH_Click(object sender, EventArgs e)
+        {
+            txtMaKH.Text = dgridTimkiemkH.CurrentRow.Cells["MaKH"].Value.ToString();
+            txtTenKH.Text = dgridTimkiemkH.CurrentRow.Cells["Tenkhach"].Value.ToString();
+            txtDiachi.Text = dgridTimkiemkH.CurrentRow.Cells["Diachi"].Value.ToString();
+            mskdienthoai.Text =dgridTimkiemkH.CurrentRow.Cells["Dienthoai"].Value.ToString();
+            txtMaKH.Enabled = false;
         }
     }
 }

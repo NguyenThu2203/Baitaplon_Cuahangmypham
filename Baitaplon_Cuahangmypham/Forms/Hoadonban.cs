@@ -71,7 +71,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         private void Load_DataGridView()
         {
             string sql;
-            sql = "SELECT a.Mahang, b.Tenhang, a.Soluong, b.Dongiaban, a.Giamgia, a.Thanhtien FROM tblChitiethoadonban AS a, tblHanghoa AS b WHERE a.SoHDB = N'" + txtMahoadon.Text + "' AND a.Mahang=b.Mahang";
+            sql = "SELECT a.Mahang, b.Tenhang, a.Soluong, b.Dongiaban, a.Giamgia, a.Thanhtien FROM tblChitiethoadonban AS a, tblHanghoa AS b WHERE a.SoHDB = N'" + txtMahoadon.Text.Trim() + "' AND a.Mahang=b.Mahang";
             tblCTHDB = Functions.GetDataToTable(sql);
             dgridChitiethoadonban.DataSource = tblCTHDB;
 

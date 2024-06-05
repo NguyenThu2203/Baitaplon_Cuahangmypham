@@ -27,7 +27,7 @@ namespace Baitaplon_Cuahangmypham.Forms
             txtManhanvien.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
-            Class.Functions.FillCombo("select MaCV from tblCongviec", cboCV, "MaCV", "MaCV");
+            Class.Functions.FillCombo("select MaCV, TenCV from tblCongviec", cboCV, "MaCV", "TenCV");
             cboCV.SelectedIndex = -1;
             load_datagrid();
         }
@@ -35,7 +35,7 @@ namespace Baitaplon_Cuahangmypham.Forms
         private void load_datagrid()
         {
             string sql;
-            sql = "select MaNV, TenNV, Gioitinh, Ngaysinh, Dienthoai, Diachi, MaCV from tblNhanvien";
+            sql = "select MaNV, TenNV, Gioitinh, Ngaysinh, Dienthoai, Diachi, MaCV from tblNhanvien ";
             tblNV = Class.Functions.GetDataToTable(sql);
             dgridNhanvien.DataSource = tblNV;
             dgridNhanvien.Columns[0].HeaderText = "Mã nhân viên ";
@@ -181,7 +181,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 return;
             }
 
-            sql = "insert into tblNhanvien(MaNV, TenNV, Gioitinh, Ngaysinh, Dienthoai, Diachi, MaCV) values(N'" + txtManhanvien.Text + "', N'" + txtTennhanvien.Text + "', N'" + gt + "', '" + Class.Functions.ConvertDatetime(mskngaysinh.Text) + "', '" + mskdienthoai.Text + "', N'" + txtDiachi.Text + "', N'" + cboCV.Text + "' )";
+            sql = "insert into tblNhanvien(MaNV, TenNV, Gioitinh, Ngaysinh, Dienthoai, Diachi, MaCV) values(N'" + txtManhanvien.Text + "', N'" + txtTennhanvien.Text + "', N'" + gt + "', '" + Class.Functions.ConvertDatetime(mskngaysinh.Text) + "', '" + mskdienthoai.Text + "', N'" + txtDiachi.Text + "', N'" + cboCV.SelectedValue.ToString() + "' )";
             Class.Functions.RunSql(sql);
             load_datagrid();
             resetvalue();
@@ -286,7 +286,7 @@ namespace Baitaplon_Cuahangmypham.Forms
                 return;
             }
 
-            sql = "update tblNhanvien set TenNV=N'" + txtTennhanvien.Text.Trim().ToString() + "', MaCV=N'" + cboCV.Text.Trim().ToString() + "', Diachi=N'" + txtDiachi.Text.Trim().ToString() + "', Gioitinh =N'" + gt + "', Dienthoai='" + mskdienthoai.Text.ToString() + "',  Ngaysinh='" + Class.Functions.ConvertDatetime(mskngaysinh.Text) + "' where MaNV=N'" + txtManhanvien.Text + "'";
+            sql = "update tblNhanvien set TenNV=N'" + txtTennhanvien.Text.Trim().ToString() + "', MaCV=N'" +cboCV.SelectedValue.ToString() + "', Diachi=N'" + txtDiachi.Text.Trim().ToString() + "', Gioitinh =N'" + gt + "', Dienthoai='" + mskdienthoai.Text.ToString() + "',  Ngaysinh='" + Class.Functions.ConvertDatetime(mskngaysinh.Text) + "' where MaNV=N'" + txtManhanvien.Text + "'";
             Class.Functions.RunSql(sql);
             load_datagrid();
             resetvalue();
