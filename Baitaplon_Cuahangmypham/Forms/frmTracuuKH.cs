@@ -99,14 +99,5 @@ namespace Baitaplon_Cuahangmypham.Forms
         {
             this.Close();
         }
-
-        private void dgridTimkiemkH_Click(object sender, EventArgs e)
-        {
-            txtMaKH.Text = dgridTimkiemkH.CurrentRow.Cells["MaKH"].Value.ToString();
-            txtTenKH.Text = dgridTimkiemkH.CurrentRow.Cells["Tenkhach"].Value.ToString();
-            txtDiachi.Text = dgridTimkiemkH.CurrentRow.Cells["Diachi"].Value.ToString();
-            mskdienthoai.Text =dgridTimkiemkH.CurrentRow.Cells["Dienthoai"].Value.ToString();
-            txtMaKH.Enabled = false;
-        }
     }
 }

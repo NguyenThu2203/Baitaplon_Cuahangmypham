@@ -86,7 +86,6 @@
             this.dgridTimkiemkH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgridTimkiemkH.Size = new System.Drawing.Size(723, 182);
             this.dgridTimkiemkH.TabIndex = 68;
-            this.dgridTimkiemkH.Click += new System.EventHandler(this.dgridTimkiemkH_Click);
             // 
             // mskdienthoai
             // 

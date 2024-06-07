@@ -76,10 +76,10 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtDongianhap = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnInHH = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnInHH = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgridHanghoa)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -543,6 +543,22 @@
             this.groupBox1.TabIndex = 92;
             this.groupBox1.TabStop = false;
             // 
+            // btnInHH
+            // 
+            this.btnInHH.AutoEllipsis = true;
+            this.btnInHH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnInHH.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnInHH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInHH.ForeColor = System.Drawing.Color.Transparent;
+            this.btnInHH.Location = new System.Drawing.Point(770, 273);
+            this.btnInHH.Name = "btnInHH";
+            this.btnInHH.Size = new System.Drawing.Size(140, 40);
+            this.btnInHH.TabIndex = 93;
+            this.btnInHH.Text = "Xuất file ";
+            this.btnInHH.UseVisualStyleBackColor = false;
+            this.btnInHH.Click += new System.EventHandler(this.btnInHH_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -570,22 +586,6 @@
             this.label3.TabIndex = 75;
             this.label3.Text = "Tên hàng";
             // 
-            // btnInHH
-            // 
-            this.btnInHH.AutoEllipsis = true;
-            this.btnInHH.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnInHH.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnInHH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInHH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInHH.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInHH.Location = new System.Drawing.Point(770, 273);
-            this.btnInHH.Name = "btnInHH";
-            this.btnInHH.Size = new System.Drawing.Size(140, 40);
-            this.btnInHH.TabIndex = 93;
-            this.btnInHH.Text = "Xuất file ";
-            this.btnInHH.UseVisualStyleBackColor = false;
-            this.btnInHH.Click += new System.EventHandler(this.btnInHH_Click);
-            // 
             // frmHanghoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -611,6 +611,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmHanghoa";
             this.Text = "frmHanghoa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHanghoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picAnh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgridHanghoa)).EndInit();

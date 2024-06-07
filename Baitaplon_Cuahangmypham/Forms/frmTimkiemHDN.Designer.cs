@@ -272,6 +272,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTimkiemHDN";
             this.Text = "frmTimkiemHDN";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTimkiemHDN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridTimhoadonnhap)).EndInit();
             this.ResumeLayout(false);
